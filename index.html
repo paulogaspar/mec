@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Dr PRO</title>
+<title>Médico em Casa</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Dr PRO template project">
@@ -17,6 +17,35 @@
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-datetimepicker.min.css" media="screen">
 </head>
 <body>
+
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_PT/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="2230136933773014"
+  theme_color="#57ccc3"
+  logged_in_greeting="Olá. Como posso ajudar?"
+  logged_out_greeting="Olá. Como posso ajudar?">
+</div>
 
 <div class="super_container">
 	
@@ -688,34 +717,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		//daysOfWeekDisabled: [0,6],
     });
 </script>
-
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v3.2'
-    });
-  };
-
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/pt_PT/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Your customer chat code -->
-<div class="fb-customerchat"
-  attribution=setup_tool
-  page_id="2230136933773014"
-  theme_color="#57ccc3"
-  logged_in_greeting="Olá. Como posso ajudar?"
-  logged_out_greeting="Olá. Como posso ajudar?">
-</div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134944463-1"></script>
