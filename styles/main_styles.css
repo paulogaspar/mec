@@ -878,7 +878,7 @@ section
 .why
 {
 	width: 100%;
-	background: #eff3f7;
+	background: #f5f5f4; /* #eff3f7; */
 }
 .why_content
 {
