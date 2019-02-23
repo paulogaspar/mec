@@ -142,7 +142,9 @@
 					<br/><br/><br/>
 					<h4>Telefone-nos</h4>
 					<br/>
-					<div class="cta_phone ml-lg-auto">210 123 123</div>
+						<a href="tel:210123123">
+							<div class="cta_phone ml-lg-auto">210 123 123</div>
+						</a>
 					<br/>
 					<div class="extra_text">
 						<p><b>Nota:</b> Se por algum motivo a sua urgência não estiver a ser atendida contacte-nos por mensagem no chat ou agende uma visita. Será contactado com a maior brevidade.</p>
@@ -173,8 +175,8 @@
 											<p>O Médico em Casa é um serviço especializado de medicina ao domicilio. Fale connosco agora e estamos em sua casa em 20 minutos*, ou agende uma visita para mais tarde.</p>
 										</div>
 										<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-											<div class="button button_1 trans_200"><a href="tel:210123123" data-toggle="modal" data-target="#callmodal">Chamar um médico</a></div>
-											<div class="button button_2 trans_200"><a href="#intro">agendar uma visita</a></div>
+											<div class="button button_1 trans_200"><a href="tel:210123123" data-toggle="modal" data-target="#callmodal">Chamar médico</a></div>
+											<div class="button button_2 trans_200"><a href="#intro">agendar visita</a></div>
 										</div>
 										<div class="home_text">
 										<p style="margin-top: 100px">
@@ -189,8 +191,8 @@
 				</div>
 
 				<!-- Slide -->
-				<!--div class="owl-item">
-					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(../imagens/shutterstock_558136654_adapted.jpg)"></div>
 					<div class="home_container">
 						<div class="container">
 							<div class="row">
@@ -202,15 +204,15 @@
 											<p>Não se preocupe. O Médico em Casa oferece preços razoáveis a quem não está coberto por um seguro. Fale com um operador, por chat ou telefone, e chame um médico sem medo.</p>
 										</div>
 										<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-											<div class="button button_1 trans_200"><a href="tel:210123123" data-toggle="modal" data-target="#callmodal">Chamar um médico</a></div>
-											<div class="button button_2 trans_200"><a href="#intro">agendar uma visita</a></div>
+											<div class="button button_1 trans_200"><a href="tel:210123123" data-toggle="modal" data-target="#callmodal">Chamar médico</a></div>
+											<div class="button button_2 trans_200"><a href="#intro">agendar visita</a></div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div-->
+				</div>
 
 				<!-- Slide -->
 				<!--div class="owl-item">
@@ -244,7 +246,6 @@
 				<ul id="home_slider_custom_dots" class="home_slider_custom_dots d-flex flex-row align-items-center justify-content-start">
 					<li class="home_slider_custom_dot trans_200 active"></li>
 					<li class="home_slider_custom_dot trans_200"></li>
-					<li class="home_slider_custom_dot trans_200"></li>
 				</ul>
 			</div>
 
@@ -265,34 +266,35 @@
 							<div class="section_title"><h2>Sinta-se melhor hoje</h2></div>
 						</div>
 						<div class="intro_text">
-							<p>Integer aliquet congue libero, eu gravida odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feugiat bibendum orci, non elementum urna vestibulum in. Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci elementum eleifend tempor, nunc libero porttitor tellus, vel pharetra metus dolor.</p>
+							<p>Agende uma visita e sinta-se melhor ainda hoje. O Médico em Casa não tem fidelizações nem custos escondidos e oferece o serviço mais profissional a um preço acessível.</p>
+							<p>Se tiver questões não hesite em falar connosco através do nosso <strong>chat, telefone, ou e-mail</strong>.</p>
 						</div>
 						<div class="milestones">
 							<div class="row milestones_row">
 							
 								<!-- Milestone -->
-								<div class="col-md-4 milestone_col">
+								<!--div class="col-md-4 milestone_col">
 									<div class="milestone">
 										<div class="milestone_counter" data-end-value="5000" data-sign-before="+">0</div>
-										<div class="milestone_text">Satisfied Patients</div>
+										<div class="milestone_text">Visitas</div>
 									</div>
-								</div>
+								</div-->
 
 								<!-- Milestone -->
-								<div class="col-md-4 milestone_col">
+								<!--div class="col-md-4 milestone_col">
 									<div class="milestone">
 										<div class="milestone_counter" data-end-value="352">0</div>
-										<div class="milestone_text">Face Liftings</div>
+										<div class="milestone_text">Pacientes</div>
 									</div>
-								</div>
+								</div-->
 
 								<!-- Milestone -->
-								<div class="col-md-4 milestone_col">
+								<!--div class="col-md-4 milestone_col">
 									<div class="milestone">
 										<div class="milestone_counter" data-end-value="718">0</div>
-										<div class="milestone_text">Injectibles</div>
+										<div class="milestone_text">Médicos</div>
 									</div>
-								</div>
+								</div-->
 
 							</div>
 						</div>
@@ -303,11 +305,19 @@
 				<div class="col-lg-6 intro_col">
 					<div class="intro_form_container">
 						<div class="intro_form_title">Agende uma visita</div>
-						<form action="#" class="intro_form" id="intro_form">
+						<script type="text/javascript">
+							function hideform()
+							{
+								document.getElementById('intro_form').style.display = 'none';
+								document.getElementById('intro_form_thankyou').style.display = 'block';
+							}
+						</script>
+						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+						<form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe6fWLmSZE_eNy8JND5lh6CA_xGIsTY0GDwDx-0kNwk9VrI_Q/formResponse" class="intro_form" id="intro_form" target="hidden_iframe" onsubmit="hideform()">
 							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-								<input type="text" class="intro_input" placeholder="O seu nome" required="required">
-								<input type="email" class="intro_input" placeholder="E-mail" required="required">
-								<input type="tel" class="intro_input" placeholder="Número de telefone" required="required">
+								<input name="entry.316678319" type="text" class="intro_input" placeholder="O seu nome" required="required">
+								<input name="entry.1531475252" type="email" class="intro_input" placeholder="E-mail" required="required">
+								<input name="entry.646546166" type="tel" class="intro_input" placeholder="Número de telefone" required="required">
 								<!--select class="intro_select intro_input" required>
 									<option disabled="" selected="" value="">Speciality</option>
 									<option>Speciality 1</option>
@@ -324,10 +334,16 @@
 										<option>Doctor 4</option>
 										<option>Doctor 5</option>
 									</select-->
-								<input type="text" id="datetimepicker" class="intro_input form_datetime" placeholder="Data que pretende" required="required">
+								<input name="entry.1094250517" type="text" id="datetimepicker" class="intro_input form_datetime" placeholder="Data que pretende" required="required">
 							</div>
-							<button class="button button_1 intro_button trans_200">make an appointment</button>
+							<button class="button button_1 intro_button trans_200">agendar visita</button>
 						</form>
+						<div id="intro_form_thankyou" style="display: none">
+						<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+							<h3>A sua visita foi agendada.</h3>
+							<p>Entraremos em contacto consigo muito em breve.</p>
+						</div>
+						</div>
 					</div>
 				</div>
 
@@ -353,7 +369,7 @@
 				<div class="col-lg-6 order-lg-2 order-1">
 					<div class="why_content">
 						<div class="section_title_container">
-							<div class="section_subtitle">This is Dr Pro</div>
+							<div class="section_subtitle">Médico em Casa</div>
 							<div class="section_title"><h2>Why choose us?</h2></div>
 						</div>
 						<div class="why_text">
@@ -557,7 +573,7 @@
 	<!-- Newsletter -->
 
 	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="../imagens/doc-adapted.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
