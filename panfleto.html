@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<style type="text/css">
+		
+		@page  
+		{ 
+			size: auto;   /* auto is the initial value */ 
+
+			/* this affects the margin in the printer settings */ 
+			margin: 0mm 0mm 0mm 0mm;  
+		} 
+		
+		body
+		{
+		  margin: 0px;  
+		}
+
+		#printable { display: none; }
+
+		@media print
+		{
+			#non-printable { display: none; }
+			#printable { display: block; }
+		}
+		</style>
+	</head>
+	<body>
+		<div id="non-printable">
+			</br></br>
+			<center>
+				<a href="javascript:window.print()">Clique Aqui para Imprimir</a>
+				</br></br></br></br>
+				<img width="50%" src="./images/flyer.jpg" />
+			</center>
+		</div>
+
+		<div id="printable">
+			<img width="100%" src="./images/flyer.jpg" />
+		</div>
+	</body>
+</html>
