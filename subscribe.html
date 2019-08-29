@@ -61,33 +61,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="contact_content">
 						<div class="contact_content_title">Condições</div>
 						<div class="contact_content_text">
-							<p>Leia atentamente as condições do serviço antes de proceder com a sus inscrição.</p>
+							<p>Leia atentamente os termos e condições do serviço antes de proceder com a sua inscrição.</p>
 						</div>
 						
 						<div class="contact_info">
 							<ul>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Serviço</div>
-									<div style="max-width: none">1. A subscrição do serviço médico ao domicílio permite-lhe chamar um médico de clinica geral </div>
+								<li class="">
+									<div class="">Serviço</div>
+									<div class="">1. A subscrição do serviço médico ao domicílio permite ao subscritor chamar a sua casa um médico de clinica geral.</div>
+									<div class="">2. O serviço médico ao domicílio permite a consulta médica em casos de doença pontual.</div>
+									<div class="">3. A subcrição poderá ser cancelada a qualquer momento através do contacto com o nosso email <i>geral@medico.casa</i>. Exceptuam-se as situações indicadas abaixo em "Limites".</div>
+									<div>Médico pode passar receitas (se achar necessário).</div>
+									<div>Médico pode passar atestados  médica .</div>
+									<div>Cada subscrição é apenas valida para uma pessoa, a que for registada...</div>
 								</li>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>Limitações</div>
-									<div>Os médicos são de clinica geral. O tempo de espera poderá ser de até 3 horas.</div>
+								<li class="">
+									<div>Pagamento</div>
+									<div class="">1. A subcrição terá o custo mensal de 15€ e as consultas não terão nenhum custo.</div>
+									<div class="">2. O pagamento será mensal e automático através de débito direto ou cartão de crédito.</div>
+									<div class="">3. A falta de pagamento ou o cancelamento do mesmo terminará a subscrição imediatamente. Em casos de cancelamento ou falta de pagamento onde o subscritor esteja em periodo de fidelização, o mesmo terá de pagar à Médico em Casa o valor equivalente à subscrição mensal de todos os meses em falta do período de fidelização. </div>
 								</li>
-								<li class="d-flex flex-row align-items-start justify-content-start">
-									<div>E-mail</div>
-									<div>yourmail@gmail.com</div>
+								<li class="">
+									<div>Limites</div>
+									<div>1. O tempo de espera poderá variar e ser de até 3 horas.</div>
+									<div>2. O tempo de espera máximo mencionado no ponto 1 não se aplica em situações de epidemia.</div>
+									<div>3. A subscrição do serviço terá um limite anual de 5 consultas.</div>
+									<div>4. Após qualquer consulta a subscrição terá um periodo de fidelização de mais 4 meses, durante os quais a subscrição do serviço e o seu respectivo pagamento não poderão ser cancelados.</div>
+									<div>5. A Médico em Casa e os seus profissionais médicos reservam-se o direito de rejeitar uma consulta em casos de emergência médica ou quando não hajam condições suficientes para atender as necessidades do paciente...... ainda mais, poderá encaminhar para o hospital... </div>
+									<div>Médico não leva nada (medicamentos, injecções, etc).</div>
+									<div>Médico não passa baixa.</div>
+									<div>O serviço é apenas válido para a morada indicada durante o registo</div>
 								</li>
-							</ul>
-						</div>
-						<div class="contact_social">
-							<ul class="d-flex flex-row align-items-center justify-content-start">
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -96,31 +100,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<!-- Info Form -->
 				<div class="col-lg-6 offset-lg-1 ">
 					<div class="contact_form_container">
-						<div class="contact_form_title">Ficha de inscrição</div>
-						<form action="#" class="contact_form" id="contact_form">
-							<b>Insira os dados do paciente.</b><br/>
-							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-								<input type="text" class="contact_input" placeholder="Primeiro e último nome" required="required">
-								<input type="email" class="contact_input" placeholder="Your E-mail" required="required">
-								<input type="tel" class="contact_input" placeholder="Your Phone" required="required">
-								<select class="contact_select contact_input" required>
-									<option disabled="" selected="">Speciality</option>
-									<option>Speciality 1</option>
-									<option>Speciality 2</option>
-									<option>Speciality 3</option>
-									<option>Speciality 4</option>
-									<option>Speciality 5</option>
-								</select>
-								<select class="contact_select contact_input"required="required">
-										<option disabled="" selected="">Doctor</option>
-										<option>Doctor 1</option>
-										<option>Doctor 2</option>
-										<option>Doctor 3</option>
-										<option>Doctor 4</option>
-										<option>Doctor 5</option>
-									</select>
-								<input type="text" id="datepicker" class="contact_input datepicker" placeholder="Date" required="required">
+						<div class="contact_form_title">Ficha de registo</div>
+						<form action="#" class="" id="contact_form">
+							<p class="mb-4">Insira os dados do <b>paciente</b> a subscrever.</p>
+							
+							<div class="form-row">
+							    <div class="form-group col-md-6">
+							      <label for="inputFirstName">Primeiro nome</label>
+							      <input type="text" class="form-control" id="inputFirstName" placeholder="" required>
+							    </div>
+							    <div class="form-group col-md-6">
+							      <label for="inputLastName">Último nome</label>
+							      <input type="text" class="form-control" id="inputLastName" placeholder="" required>
+							    </div>
+						  	</div>
+						  	<div class="form-group">
+								<label for="inputAddress">Data de nascimento</label>
+								<input type="date" class="form-control" id="inputAddress" placeholder="" required>
 							</div>
+							<div class="form-group">
+								<label for="inputAddress">Morada</label>
+								<input type="text" class="form-control" id="inputAddress" placeholder="Rua" required>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="inputAddress2" placeholder="Número \ Andar \ Porta">
+							</div>
+						  <div class="form-row">
+						  	<div class="form-group col-md-4">
+						      <label for="inputZip">Código Postal</label>
+						      <input type="text" class="form-control" id="inputZip" pattern="[0-9]{4}-[0-9]{3}" required>
+						    </div>
+						    <div class="form-group col-md-6">
+						      <label for="inputCity">Cidade</label>
+						      <input type="text" class="form-control" id="inputCity" required>
+						    </div>
+						  </div>
+						  <div class="form-row">
+							    <div class="form-group col-md-6">
+							      <label for="inputTelefone">Telemóvel</label>
+							      <input type="text" class="form-control" id="inputTelefone" placeholder="" required>
+							    </div>
+							    <div class="form-group col-md-6">
+							      <label for="inputEmail">E-mail</label>
+							      <input type="email" class="form-control" id="inputEmail" placeholder="" required>
+							    </div>
+						  	</div>
+						  	<div class="form-group">
+								<label for="inputAddress">NIF (para efeitos de faturação)</label>
+								<input type="number" class="form-control" id="inputAddress" placeholder="" required>
+							</div>
+							
+
 							<button class="button button_1 contact_button trans_200">make an appointment</button>
 						</form>
 					</div>
@@ -229,15 +259,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a style="color:gray" href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
-							<nav class="footer_nav ml-md-auto">
-								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="blog.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-							</nav>
+
 						</div>
 					</div>
 				</div>
