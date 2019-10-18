@@ -47,7 +47,6 @@ $(document).ready(function()
 
 	initMenu();
 	initSelect();
-	//initGoogleMap();
 	prepareForm();
 	setupStripe();
 
@@ -81,35 +80,19 @@ $(document).ready(function()
 				$('#addExtraPerson').hide();
 			}
 		});
+
+		var searchParams = new URLSearchParams(window.location.search);
+		if (searchParams.has('sendenabled'))
+		{
+			$('#send-form-button').show();
+			$("#send-form-button").click(function() {
+				sendForm();
+			});
+		}
 	}
 
 
 	/* Setup Stripe payments. */
-
-/*	var stripe = Stripe('pk_test_a7pIT8V0KQnKr2YAkFFQi0EX00UwI3IFTd');
-
-	var checkoutButton = $('#checkout-button');
-  	checkoutButton.click(function () {
-  		// confirm form validity
-  		if (!document.querySelector('#contact_form').reportValidity()) {return;};
-
-	    stripe.redirectToCheckout({
-		      items: [{plan: 'plan_FzFNrvDiHgzQj1', quantity: 1}],
-		      successUrl: 'https://medico.casa/success',
-		      cancelUrl: 'https://medico.casa/canceled',
-		      customerEmail: $('#inputEmail').val(),
-	    })
-		.then(function (result) {
-		      if (result.error) {
-		        // If 'redirectToCheckout' fails due to a browser or network
-		        // error, display a localized error message to the customer.
-		        alert('Error: ' + result.error.message)
-		        var displayError = document.getElementById('error-message');
-		        displayError.textContent = result.error.message;
-		      }
-		});
-    });*/
-
     function setupStripe()
     {
     	var host = "https://server.medico.casa";
@@ -147,38 +130,7 @@ $(document).ready(function()
 		  		}
 
 		  		// Build data object
-		  		var dataObj = { firstName: $('#inputFirstName').val(),
-				    		lastName: $('#inputLastName').val(),
-				    		birthDate: $('#inputBirthdate').val(),
-				    		Address1: $('#inputAddress').val(),
-				    		Address2: $('#inputAddress2').val(),
-				    		zipCode: $('#inputZip').val(),
-				    		city: $('#inputCity').val(),
-				    		phone: $('#inputTelefone').val(),
-				    		email: $('#inputEmail').val(),
-				    		nif: $('#inputNIF').val(),
-				    		planId: selectedPlanID,
-				    		numberOfPersons: 1}
-
-				if (selectedPlan == "plan2") {
-					dataObj['extra1FirstName'] = $('#extra1inputFirstName').val().trim();
-					dataObj['extra1LastName'] = $('#extra1inputLastName').val().trim();
-					dataObj['extra1BirthDate'] = $('#extra1inputBirthdate').val();
-					dataObj['numberOfPersons'] = 2;
-					
-					if ($('#thirdPersonGroup').is(':visible') && ($('#extra2inputFirstName').val().trim().length != 0)) {
-						dataObj['extra2FirstName'] = $('#extra2inputFirstName').val().trim();
-						dataObj['extra2LastName'] = $('#extra2inputLastName').val().trim();
-						dataObj['extra2BirthDate'] = $('#extra2inputBirthdate').val();
-						dataObj['numberOfPersons'] = 3;
-					}
-					if ($('#forthPersonGroup').is(':visible') && ($('#extra3inputFirstName').val().trim().length != 0)) {
-						dataObj['extra3FirstName'] = $('#extra3inputFirstName').val().trim();
-						dataObj['extra3LastName'] = $('#extra3inputLastName').val().trim();
-						dataObj['extra3BirthDate'] = $('#extra3inputBirthdate').val();	
-						dataObj['numberOfPersons'] = 4;
-					}
-				}
+		  		var dataObj = buildFormObject();
 
 		  		// Create Checkout Session
 		  		var createCheckoutSession = await fetch(host + "/create-checkout-session", {
@@ -210,6 +162,49 @@ $(document).ready(function()
 		$('error-message').show();
     }
     
+    function sendForm()
+    {
+
+    }
+
+    function buildFormObject()
+    {
+  		// Build data object
+  		var dataObj = { firstName: $('#inputFirstName').val(),
+		    		lastName: $('#inputLastName').val(),
+		    		birthDate: $('#inputBirthdate').val(),
+		    		Address1: $('#inputAddress').val(),
+		    		Address2: $('#inputAddress2').val(),
+		    		zipCode: $('#inputZip').val(),
+		    		city: $('#inputCity').val(),
+		    		phone: $('#inputTelefone').val(),
+		    		email: $('#inputEmail').val(),
+		    		nif: $('#inputNIF').val(),
+		    		planId: selectedPlanID,
+		    		numberOfPersons: 1}
+
+		if (selectedPlan == "plan2") {
+			dataObj['extra1FirstName'] = $('#extra1inputFirstName').val().trim();
+			dataObj['extra1LastName'] = $('#extra1inputLastName').val().trim();
+			dataObj['extra1BirthDate'] = $('#extra1inputBirthdate').val();
+			dataObj['numberOfPersons'] = 2;
+			
+			if ($('#thirdPersonGroup').is(':visible') && ($('#extra2inputFirstName').val().trim().length != 0)) {
+				dataObj['extra2FirstName'] = $('#extra2inputFirstName').val().trim();
+				dataObj['extra2LastName'] = $('#extra2inputLastName').val().trim();
+				dataObj['extra2BirthDate'] = $('#extra2inputBirthdate').val();
+				dataObj['numberOfPersons'] = 3;
+			}
+			if ($('#forthPersonGroup').is(':visible') && ($('#extra3inputFirstName').val().trim().length != 0)) {
+				dataObj['extra3FirstName'] = $('#extra3inputFirstName').val().trim();
+				dataObj['extra3LastName'] = $('#extra3inputLastName').val().trim();
+				dataObj['extra3BirthDate'] = $('#extra3inputBirthdate').val();	
+				dataObj['numberOfPersons'] = 4;
+			}
+		}
+
+		return dataObj;
+    }
 
 	/* 
 

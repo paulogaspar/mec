@@ -133,7 +133,8 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	line-height: 1.2;
-	color: #404040;
+	/*color: #404040;*/
+	color: #878787;
 }
 h1::selection, 
 h2::selection, 
@@ -1169,4 +1170,30 @@ section
 #plan2-extra-people, #payment
 {
 	display: none;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+  z-index: 100000;
+}
+.arrow a {
+	color: #818181;	
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
