@@ -69,28 +69,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<li class="">
 									<div class="">Serviço</div>
 									<div class="">1. A subscrição do serviço médico ao domicílio permite ao subscritor chamar a sua casa um médico de clinica geral.</div>
-									<div class="">2. O serviço médico ao domicílio permite a consulta médica em casos de doença pontual.</div>
-									<div class="">3. A subcrição poderá ser cancelada a qualquer momento através do contacto com o nosso email <i>geral@medico.casa</i>. Exceptuam-se as situações indicadas abaixo em "Limites".</div>
-									<div>Médico pode passar receitas (se achar necessário).</div>
-									<div>Médico pode passar atestados  médica .</div>
-									<div>Cada subscrição é apenas valida para uma pessoa, a que for registada...</div>
+									<div class="">2. O serviço médico ao domicílio permite a consulta médica em casos de doença pontual, como gripes, febres, dores, indisposições, infeções, etc. Não se incluem casos de doença crónica, emergências médicas ou situações que necessitem de serviços hospitalares ou médicos especialistas.</div>
+									<div class="">3. A subcrição poderá ser cancelada a qualquer momento através do contacto com o nosso email <i>geral@medico.casa</i>.</div>
+									<div class="">4. Os profissionais médicos podem passar receitas e atestados médicos caso se verifique necessidade, sendo sua a decisão.</div>
+									<div>5. No plano individual a subscrição é válida apenas para uma pessoa. No plano familiar podem ser incluídas até 4 pessoas.</div>
 								</li>
 								<li class="">
 									<div>Pagamento</div>
-									<div class="">1. A subcrição terá o custo mensal de 15€ e as consultas não terão nenhum custo.</div>
-									<div class="">2. O pagamento será mensal e automático através de débito direto ou cartão de crédito.</div>
-									<div class="">3. A falta de pagamento ou o cancelamento do mesmo terminará a subscrição imediatamente. Em casos de cancelamento ou falta de pagamento onde o subscritor esteja em periodo de fidelização, o mesmo terá de pagar à Médico em Casa o valor equivalente à subscrição mensal de todos os meses em falta do período de fidelização. </div>
+									<div class="">1. No plano individual (uma pessoa) a subcrição terá o custo mensal de 10€ e cada consulta terá o valor de 10€. No plano familiar o valor mensal é de 20€ e cada consulta tem o valor de 10€. No plano familiar todos os inscritos têm de viver na morada fornecida.</div>
+									<div class="">2. O pagamento será trimestral e automático através de débito direto ou cartão de crédito. O primeiro pagamento será imediatamente após o registo.</div>
+									<div class="">3. A falta de pagamento ou o cancelamento do mesmo terminará a subscrição imediatamente não tendo direito a qualquer devolução. </div>
 								</li>
 								<li class="">
 									<div>Limites</div>
-									<div>1. O tempo de espera poderá variar e ser de até 3 horas.</div>
-									<div>2. O tempo de espera máximo mencionado no ponto 1 não se aplica em situações de epidemia.</div>
-									<div>3. A subscrição do serviço terá um limite anual de 5 consultas.</div>
-									<div>4. Após qualquer consulta a subscrição terá um periodo de fidelização de mais 4 meses, durante os quais a subscrição do serviço e o seu respectivo pagamento não poderão ser cancelados.</div>
-									<div>5. A Médico em Casa e os seus profissionais médicos reservam-se o direito de rejeitar uma consulta em casos de emergência médica ou quando não hajam condições suficientes para atender as necessidades do paciente...... ainda mais, poderá encaminhar para o hospital... </div>
-									<div>Médico não leva nada (medicamentos, injecções, etc).</div>
-									<div>Médico não passa baixa.</div>
-									<div>O serviço é apenas válido para a morada indicada durante o registo</div>
+									<div>1. O tempo de espera pela chegada do médico poderá variar e ser de até 3 horas. O mesmo poderá estar condicionado a situações excepcionais como trânsito ou surtos epidémicos.</div>
+									<div>2. Em situações de usufruto intensivo do serviço o valor da subscrição poderá ser alterado pela Médico em Casa mediante aviso prévio por correio electrónico. O novo valor será reflectido apenas nos pagamentos subsequentes.</div>
+									<div>3. A Médico em Casa e/ou os profissionais médicos reservam-se o direito de rejeitar consultas em casos de emergência médica ou quando não se verifiquem condições suficientes para atender as necessidades do paciente e poderão dar indicação de ida para o hospital.</div>
+									<div>4. Os professionais médicos a realizar consultas não transportam medicamentos, injecções ou outros tratamentos, nem realizam a aplicação dos mesmos. Poderão no entanto receitar medicações.</div>
+									<div>5. O serviço é apenas válido para a morada e paciente indicados durante o registo.</div>
 								</li>
 							</ul>
 						</div>
@@ -107,52 +103,114 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="form-row">
 							    <div class="form-group col-md-6">
 							      <label for="inputFirstName">Primeiro nome</label>
-							      <input type="text" class="form-control" id="inputFirstName" placeholder="" required>
+							      <input type="text" class="form-control" id="inputFirstName" placeholder=""  required value="PRIMEIRONOME">
 							    </div>
 							    <div class="form-group col-md-6">
 							      <label for="inputLastName">Último nome</label>
-							      <input type="text" class="form-control" id="inputLastName" placeholder="" required>
+							      <input type="text" class="form-control" id="inputLastName" placeholder="" required value="ULTIMONOME">
 							    </div>
 						  	</div>
 						  	<div class="form-group">
-								<label for="inputAddress">Data de nascimento</label>
-								<input type="date" class="form-control" id="inputAddress" placeholder="" required>
+								<label for="inputBirthdate">Data de nascimento</label>
+								<input type="date" class="form-control" id="inputBirthdate" placeholder="" required value="2019-01-01">
 							</div>
 							<div class="form-group">
 								<label for="inputAddress">Morada</label>
-								<input type="text" class="form-control" id="inputAddress" placeholder="Rua" required>
+								<input type="text" class="form-control" id="inputAddress" placeholder="Rua" required value="MORADA">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="inputAddress2" placeholder="Número \ Andar \ Porta">
+								<input type="text" class="form-control" id="inputAddress2" placeholder="Número \ Andar \ Porta" value="11">
 							</div>
 						  <div class="form-row">
 						  	<div class="form-group col-md-4">
 						      <label for="inputZip">Código Postal</label>
-						      <input type="text" class="form-control" id="inputZip" pattern="[0-9]{4}-[0-9]{3}" required>
+						      <input type="text" class="form-control" id="inputZip" placeholder="" pattern="[0-9]{4}-[0-9]{3}" required value="1111-111">
 						    </div>
 						    <div class="form-group col-md-6">
 						      <label for="inputCity">Cidade</label>
-						      <input type="text" class="form-control" id="inputCity" required>
+						      <input type="text" class="form-control" id="inputCity" required value="CIDADE">
 						    </div>
 						  </div>
 						  <div class="form-row">
 							    <div class="form-group col-md-6">
 							      <label for="inputTelefone">Telemóvel</label>
-							      <input type="text" class="form-control" id="inputTelefone" placeholder="" required>
+							      <input type="text" class="form-control" id="inputTelefone" placeholder="" required value="968761090">
 							    </div>
 							    <div class="form-group col-md-6">
 							      <label for="inputEmail">E-mail</label>
-							      <input type="email" class="form-control" id="inputEmail" placeholder="" required>
+							      <input type="email" class="form-control" id="inputEmail" placeholder="" required value="paulomiguelgaspar@gmail.com">
 							    </div>
 						  	</div>
 						  	<div class="form-group">
-								<label for="inputAddress">NIF (para efeitos de faturação)</label>
-								<input type="number" class="form-control" id="inputAddress" placeholder="" required>
+								<label for="inputNIF">NIF (para efeitos de faturação)</label>
+								<input type="number" class="form-control" id="inputNIF" placeholder="" required value="234206039">
 							</div>
-							
-
-							<button class="button button_1 contact_button trans_200">make an appointment</button>
+							<br/>
+							<p class="mb-3">Escolha que <b>plano</b> pretende suscrever.</p>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="PlanSelection" id="plan1" value="plan1" required>
+								<label class="form-check-label" for="plan1">
+								    Plano individual: <b>10€ / mês</b> + 10€ por consulta
+								</label>
+							</div>
+							<div class="form-check mb-3">
+								<input class="form-check-input" type="radio" name="PlanSelection" id="plan2" value="plan2"  required>
+								<label class="form-check-label" for="plan2">
+								    Plano familiar (até 4 pessoas): <b>20€ / mês</b> + 10€ por consulta
+								</label>
+							</div>
+							<div id="plan2-extra-people">
+								<p class="mt-5 mb-3">Adicione até 3 pessoas ao seu plano.</p>
+								<div class="form-row" id="secondPersonGroup">
+								    <div class="form-group col-md-3">
+								      <label for="extra1inputFirstName">Primeiro nome</label>
+								      <input type="text" class="form-control" id="extra1inputFirstName" placeholder="">
+								    </div>
+								    <div class="form-group col-md-3">
+								      <label for="extra1inputLastName">Último nome</label>
+								      <input type="text" class="form-control" id="extra1inputLastName" placeholder="">
+								    </div>
+								    <div class="form-group col-md-6">
+										<label for="extra1inputBirthdate">Data nascimento</label>
+										<input type="date" class="form-control" id="extra1inputBirthdate" placeholder="">
+									</div>
+								</div>
+								<div class="form-row" id="thirdPersonGroup">
+								    <div class="form-group col-md-3">
+								      <label for="extra2inputFirstName">Primeiro nome</label>
+								      <input type="text" class="form-control" id="extra2inputFirstName" placeholder="">
+								    </div>
+								    <div class="form-group col-md-3">
+								      <label for="extra2inputLastName">Último nome</label>
+								      <input type="text" class="form-control" id="extra2inputLastName" placeholder="">
+								    </div>
+								    <div class="form-group col-md-6">
+										<label for="extra2inputBirthdate">Data nascimento</label>
+										<input type="date" class="form-control" id="extra2inputBirthdate" placeholder="">
+									</div>
+								</div>
+								<div class="form-row" id="forthPersonGroup">
+								    <div class="form-group col-md-3">
+								      <label for="extra3inputFirstName">Primeiro nome</label>
+								      <input type="text" class="form-control" id="extra3inputFirstName" placeholder="">
+								    </div>
+								    <div class="form-group col-md-3">
+								      <label for="extra3inputLastName">Último nome</label>
+								      <input type="text" class="form-control" id="extra3inputLastName" placeholder="">
+								    </div>
+								    <div class="form-group col-md-6">
+										<label for="extra3inputBirthdate">Data nascimento</label>
+										<input type="date" class="form-control" id="extra3inputBirthdate" placeholder="">
+									</div>
+								</div>
+								<button type="button" class="btn btn-link" id="addExtraPerson"><small>Adicionar outra pessoa</small></button>
+							</div>
 						</form>
+
+							<button class="button button_1 contact_button trans_200 my-3" id="checkout-button">Proceder para pagamento</button>
+							<small id="error-message" style="color: #fd556d; display:none"><b>Houve um erro com a ligação, por favor tente outra vez. <br />Se o erro persistir, por favor contacte-nos em <a href="mailto:geral@medico.casa">geral@medico.casa</a></b><br/><br/></small>
+							<small>Quando terminar o seu pagamento a subscrição do serviço médico ficará completa. Deverá receber um email de confirmação assim que o serviço ficar activo (entre 1 e 5 dias) com todas as informações necessárias assim como a respectiva factura-recibo.</small>
+							<button class="button button_3 contact_button" id="send-form-button">Enviar formulário</button>
 					</div>
 				</div>
 
@@ -162,28 +220,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 	</div>
 
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="newsletter_title">Subscribe to our newsletter</div>
-				</div>
-			</div>
-			<div class="row newsletter_row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="newsletter_form_container">
-						<form action="#" id="newsleter_form" class="newsletter_form">
-							<input type="email" class="newsletter_input" placeholder="Your E-mail" required="required">
-							<button class="newsletter_button">subscribe</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
 
@@ -240,8 +276,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="footer_title">Localização</div>
 							<ul class="locations_list">
 								<li>
-									<div class="location_title">Distrito de Lisboa</div>
-									<div class="location_text">Lisboa, Oeiras</div>
+									<div class="location_title">Grande Lisboa</div>
+									<div class="location_text">Lisboa, Oeiras, Cascais, Sintra, Amadora, Odivelas, Loures, Vila Franca de Xira</div>
+									<br/>
+									<div class="location_title">Setúbal</div>
+									<div class="location_text">Almada, Barreiro, Montijo, Seixal, Moita, Alcochete</div>
+									<br/>
+									<div class="location_title">Grande Porto</div>
+									<div class="location_text">Porto, Vila Nova de Gaia, Matosinhos, Gondomar, Valongo, Maia, Paredes</div>
+									<br/>
+									<div class="location_title">Algarve</div>
+									<div class="location_text">Lagos, Portimão, Lagoa, Albufeira, Loulé, Faro, Olhão, Tavira, Aljezur</div>
 								</li>
 							</ul>
 						</div>
@@ -255,9 +300,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="row">
 					<div class="col">
 						<div class="footer_bar_content  d-flex flex-md-row flex-column align-items-md-center justify-content-start">
-							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a style="color:gray" href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							<div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This page was made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a style="color:gray" href="https://colorlib.com" target="_blank">Colorlib</a>
 </div>
 
 						</div>
@@ -278,8 +322,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="js/contact.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_PT/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="2230136933773014"
+  theme_color="#57ccc3"
+  logged_in_greeting="Olá. Como posso ajudar?"
+  logged_out_greeting="Olá. Como posso ajudar?"
+  greeting_dialog_delay=6>
+</div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
@@ -290,6 +362,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   gtag('config', 'UA-23581568-13');
 </script>
+
+<!-- Begin Inspectlet Asynchronous Code -->
+<script type="text/javascript">
+(function() {
+window.__insp = window.__insp || [];
+__insp.push(['wid', 2053444522]);
+var ldinsp = function(){
+if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=2053444522&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+setTimeout(ldinsp, 0);
+})();
+</script>
+<!-- End Inspectlet Asynchronous Code -->
 
 </body>
 </html>

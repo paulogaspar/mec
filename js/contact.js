@@ -47,7 +47,169 @@ $(document).ready(function()
 
 	initMenu();
 	initSelect();
-	initGoogleMap();
+	//initGoogleMap();
+	prepareForm();
+	setupStripe();
+
+
+	/* Setup input form elements. */
+	function prepareForm()
+	{
+		$('#thirdPersonGroup').hide();
+		$('#forthPersonGroup').hide();
+		$("#plan2").change(function() {
+		    $('#plan2-extra-people').show();
+		    $('#extra1inputFirstName').attr('required', '');
+		    $('#extra1inputLastName').attr('required', '');
+		    $('#extra1inputBirthdate').attr('required', '');
+		    $('#payment').show();
+		});
+		$("#plan1").change(function() {
+		    $('#plan2-extra-people').hide();
+		    $('#extra1inputFirstName').removeAttr('required', '');
+		    $('#extra1inputLastName').removeAttr('required', '');
+		    $('#extra1inputBirthdate').removeAttr('required', '');
+		    $('#payment').show();
+		});
+
+		$("#addExtraPerson").click(function() {
+			if ($('#thirdPersonGroup').is(':hidden')){
+				$('#thirdPersonGroup').show();
+			}
+			else if ($('#forthPersonGroup').is(':hidden')){
+				$('#forthPersonGroup').show();
+				$('#addExtraPerson').hide();
+			}
+		});
+	}
+
+
+	/* Setup Stripe payments. */
+
+/*	var stripe = Stripe('pk_test_a7pIT8V0KQnKr2YAkFFQi0EX00UwI3IFTd');
+
+	var checkoutButton = $('#checkout-button');
+  	checkoutButton.click(function () {
+  		// confirm form validity
+  		if (!document.querySelector('#contact_form').reportValidity()) {return;};
+
+	    stripe.redirectToCheckout({
+		      items: [{plan: 'plan_FzFNrvDiHgzQj1', quantity: 1}],
+		      successUrl: 'https://medico.casa/success',
+		      cancelUrl: 'https://medico.casa/canceled',
+		      customerEmail: $('#inputEmail').val(),
+	    })
+		.then(function (result) {
+		      if (result.error) {
+		        // If 'redirectToCheckout' fails due to a browser or network
+		        // error, display a localized error message to the customer.
+		        alert('Error: ' + result.error.message)
+		        var displayError = document.getElementById('error-message');
+		        displayError.textContent = result.error.message;
+		      }
+		});
+    });*/
+
+    function setupStripe()
+    {
+    	var host = "https://server.medico.casa";
+    	/*var host = "http://localhost:8084";*/
+
+    	/* Get your Stripe public key to initialize Stripe.js */
+		fetch(host + "/setup")
+		  .then(function(result) {
+		    return result.json();
+		  })
+		  .then(function(json) {
+		    var publicKey = json.publicKey;
+		    var planID1 = json.Plan1;
+		    var planID2 = json.Plan2;
+
+		    var stripe = Stripe(publicKey);
+		    
+		    // Setup event handler to create a Checkout Session when button is clicked
+		    var checkoutButton = $('#checkout-button');
+		  	checkoutButton.click(async function () {
+		  		// confirm form validity
+		  		if (!document.querySelector('#contact_form').reportValidity()) {return;};
+
+		  		// disable button
+		  		$('#checkout-button').text('Por favor aguarde...')
+		  		$('#checkout-button').attr("disabled", true);
+
+		  		// get selected plan
+		  		var selectedPlan = $("input[name='PlanSelection']:checked").val();
+		  		var selectedPlanID = "";
+		  		if (selectedPlan == "plan1") {
+		  			selectedPlanID = planID1;
+		  		} else {
+		  			selectedPlanID = planID2;
+		  		}
+
+		  		// Build data object
+		  		var dataObj = { firstName: $('#inputFirstName').val(),
+				    		lastName: $('#inputLastName').val(),
+				    		birthDate: $('#inputBirthdate').val(),
+				    		Address1: $('#inputAddress').val(),
+				    		Address2: $('#inputAddress2').val(),
+				    		zipCode: $('#inputZip').val(),
+				    		city: $('#inputCity').val(),
+				    		phone: $('#inputTelefone').val(),
+				    		email: $('#inputEmail').val(),
+				    		nif: $('#inputNIF').val(),
+				    		planId: selectedPlanID,
+				    		numberOfPersons: 1}
+
+				if (selectedPlan == "plan2") {
+					dataObj['extra1FirstName'] = $('#extra1inputFirstName').val().trim();
+					dataObj['extra1LastName'] = $('#extra1inputLastName').val().trim();
+					dataObj['extra1BirthDate'] = $('#extra1inputBirthdate').val();
+					dataObj['numberOfPersons'] = 2;
+					
+					if ($('#thirdPersonGroup').is(':visible') && ($('#extra2inputFirstName').val().trim().length != 0)) {
+						dataObj['extra2FirstName'] = $('#extra2inputFirstName').val().trim();
+						dataObj['extra2LastName'] = $('#extra2inputLastName').val().trim();
+						dataObj['extra2BirthDate'] = $('#extra2inputBirthdate').val();
+						dataObj['numberOfPersons'] = 3;
+					}
+					if ($('#forthPersonGroup').is(':visible') && ($('#extra3inputFirstName').val().trim().length != 0)) {
+						dataObj['extra3FirstName'] = $('#extra3inputFirstName').val().trim();
+						dataObj['extra3LastName'] = $('#extra3inputLastName').val().trim();
+						dataObj['extra3BirthDate'] = $('#extra3inputBirthdate').val();	
+						dataObj['numberOfPersons'] = 4;
+					}
+				}
+
+		  		// Create Checkout Session
+		  		var createCheckoutSession = await fetch(host + "/create-checkout-session", {
+				    method: "POST",
+				    headers: {"Content-Type": "application/json"},
+				    body: JSON.stringify(dataObj)
+				  });
+		  		var checkoutSession = await createCheckoutSession.json();
+		  		
+		        // Call Stripe.js method to redirect to the new Checkout page
+		        stripe.redirectToCheckout({sessionId: checkoutSession.sessionId})
+		            .then(function (result) {
+					      if (result.error) {
+					        // If 'redirectToCheckout' fails due to a browser or network
+					        // error, display a localized error message to the customer.
+					        /*var displayError = document.getElementById('error-message');
+					        displayError.textContent = result.error.message;*/
+					        failedConnection();
+					      }
+					});
+	  		});
+		  });
+    }
+
+    function failedConnection()
+    {
+    	$('#checkout-button').text('PROCEDER PARA PAGAMENTO')
+		$('#checkout-button').attr("disabled", false);
+		$('error-message').show();
+    }
+    
 
 	/* 
 

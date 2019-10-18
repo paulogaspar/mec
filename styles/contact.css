@@ -142,12 +142,23 @@ h4::selection,
 h5::selection, 
 h6::selection
 {
-	
+
 }
 .form-control
 {
-	color: #db5246;
+	color: #828282;
 }
+
+/************************
+      Manually added
+*************************/
+.form-control:focus
+{
+    border-color: rgba(87, 204, 195, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(87, 204, 195, 0.25);
+}
+/************************/
+
 section
 {
 	display: block;
@@ -1153,4 +1164,9 @@ section
 .footer_nav ul li a:hover
 {
 	color: #57ccc3;
+}
+
+#plan2-extra-people, #payment
+{
+	display: none;
 }
