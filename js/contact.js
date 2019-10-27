@@ -159,10 +159,25 @@ $(document).ready(function()
 
     function populateForm()
     {
-		// Auto-populate form fields (text fields only) based on query string
-		$('input:text, input[type=email]').each(function() {
+    	// select plan based on query string
+		var plan = parseInt(getParam('numberOfPersons'));
+		if (plan == 1)
+		{
+			$("#plan1").prop('checked', true);
+		}
+		else if (plan > 1) 
+		{
+			$("#plan2").prop('checked', true);
+			$('#plan2-extra-people').show();
+			if (plan > 2) 	
+				$('#thirdPersonGroup').show();
+			if (plan > 3) 	
+				$('#forthPersonGroup').show();
+		}
+
+		// Auto-populate form fields based on query string
+		$('input:text, input[type=email], input[type=number], input[type=date]').each(function() {
 			var paramValue = getParam(this.id);
-			//if (paramValue != "") console.log(paramValue);
 			if(this.value == "" && paramValue != "")
 				this.value = paramValue;
 		});
