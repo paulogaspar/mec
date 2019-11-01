@@ -346,14 +346,6 @@ section
 	padding-left: 100px;
 	padding-right: 102px;
 }
-.header_content2
-{
-	width: 100%;
-	height: 0px;
-	padding-left: 62px;
-	padding-right: 102px;
-	top: 80px;
-}
 .header.scrolled .header_content
 {
 	height: 75px;
@@ -668,7 +660,7 @@ section
 }
 .home_content
 {
-	max-width: 550px;
+	max-width: 650px;
 }
 .home_subtitle
 {
@@ -679,7 +671,7 @@ section
 }
 .home_title
 {
-	font-size: 60px;
+	font-size: 50px;
 	color: #404040;
 	line-height: 1.2;
 	font-weight: 500;
@@ -735,7 +727,8 @@ section
 }
 .intro_content
 {
-	padding-top: 30px;
+	padding-top: 0px;
+	margin-top: -30px;
 }
 .milestones
 {
