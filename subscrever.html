@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										</div>
 										<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
 											<div class="button button_2 trans_200" style="white-space: nowrap;"><a id="knowmore" href="#intro">Saber mais</a></div>
-											<div class="button button_1 trans_200" style="white-space: nowrap;"><a href="/subscribe">Subscrever <b>por 10€/mês</b></a></div>
+											<div class="button button_1 trans_200" style="white-space: nowrap;"><a href="/subscribe">Subscrever</a></div>
 										</div>
 										<!-- <div class="home_text">
 										<p style="margin-top: 100px">
@@ -131,8 +131,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								</li>
 
 								<li class="d-flex mt-5">
-									<div class="button button_1 trans_200" style="white-space: nowrap;"><a href="/subscribe">Subscrever Online</b></a></div>
+									<div class="mt-2 ml-3" id="presentation_buttons">
+										<div class="row">
+												<div class="button button_1 trans_200 mr-2 mt-2" style="white-space: nowrap;"><a href="/subscribe">Subscrever Online</b></a></div>
+												<div class="button button_2 trans_200 mt-2" style="white-space: nowrap;"><a href="#pedir_contacto">Pedir contacto</b></a></div>
+										</div>
+									</div>
 								</li>
+
 							</ul>
 
 						</div>
@@ -164,9 +170,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; Sem idade minima ou máxima.</li>
 						</ul>
 						<br/>
-						<div class="d-flex mt-4">
-									<div class="button button_1 trans_200" style="white-space: nowrap;"><a href="/subscribe">Subscrever Online</b></a></div>
-								</div>
+						<div class="mt-2">
+							<div class="row">
+									<div class="button button_1 trans_200 mr-2 mt-2" style="white-space: nowrap;"><a href="/subscribe">Subscrever Online</b></a></div>
+									<div class="button button_2 trans_200 mt-2" style="white-space: nowrap;"><a href="#pedir_contacto">Pedir contacto</b></a></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -177,21 +186,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<!-- Call to action -->
 
-	<!-- <div class="cta">
+	<div class="cta" id="pedir_contacto">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-						<div class="cta_content">
-							<div class="cta_title">Ainda tem dúvidas?</div>
-							<div class="cta_text">Contacte-nos pelo chat desta página..</div>
+						<div class="cta_content mb-4">
+							<div class="cta_title">Dúvidas? Nós telefonamos!</div>
+							<div class="cta_text">Deixe o seu nome e contacto que nós telefonamos</div>
 						</div>
-							<div class="cta_phone ml-lg-auto"><a id="callme6" style="color:white" href="tel:+351308808653">308 808 653</a></div>
+							<!-- <div class="cta_phone ml-lg-auto"><a id="callme6" style="color:white" href="tel:+351308808653">308 808 653</a></div> -->
+					</div>
+				</div>
+				<div class="col">
+					<div class="cta_container" style="min-width: 300px;">
+						<script type="text/javascript">
+							function hideform()
+							{
+								document.getElementById('intro_form').style.display = 'none';
+								document.getElementById('intro_form_thankyou').style.display = 'block';
+							}
+						</script>
+						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+						<form action="https://docs.google.com/forms/d/e/1FAIpQLSeVmiXe-feUDlC3CgTlQX9W94t38Ewc-yJd6SAq2G4Qvml6rw/formResponse" class="intro_form" id="intro_form" target="hidden_iframe" onsubmit="hideform()">
+							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+								<input name="entry.1653404171" type="text" class="intro_input" placeholder="NOME" required="required">
+								<input name="entry.768254246" type="tel" class="intro_input" placeholder="TELEFONE" required="required">
+							</div>
+							<button class="button button_1 intro_button trans_200">Pedir contacto</button>
+						</form>
+						<div id="intro_form_thankyou" style="display: none">
+							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+								<h3>Registámos o seu pedido!</h3>
+								<p>Entraremos em contacto o mais brevemente possível.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 
 	<!-- Footer -->

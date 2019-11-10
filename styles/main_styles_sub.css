@@ -824,42 +824,42 @@ section
 .intro_input:focus,
 .intro_input:hover
 {
-	border: solid 2px #57ccc3;
+	border: solid 2px #f5f5f5;
 }
 .intro_input::-webkit-input-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	color: #a09f9f !important;
+	/* color: #a09f9f !important; */
 }
 .intro_input:-moz-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	color: #a09f9f !important;
+	/*color: #a09f9f !important;*/
 }
 .intro_input::-moz-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	color: #a09f9f !important;
+	/*color: #a09f9f !important;*/
 } 
 .intro_input:-ms-input-placeholder
 { 
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	color: #a09f9f !important;
+	/*color: #a09f9f !important;*/
 }
 .intro_input::input-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	color: #a09f9f !important;
+	/*color: #a09f9f !important;*/
 }
 .intro_button
 {
@@ -956,7 +956,7 @@ section
 .cta
 {
 	width: 100%;
-	background: #fd556d;
+	background: #57ccc3;
 	padding-top: 49px;
 	padding-bottom: 46px;
 }
@@ -1315,4 +1315,9 @@ section
 .footer_nav ul li a:hover
 {
 	color: #57ccc3;
+}
+
+#presentation_buttons
+{
+	display: none;
 }
