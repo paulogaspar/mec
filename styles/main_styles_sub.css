@@ -831,35 +831,35 @@ section
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	/* color: #a09f9f !important; */
+	color: #ffffff !important;
 }
 .intro_input:-moz-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	/*color: #a09f9f !important;*/
+	color: #ffffff !important;
 }
 .intro_input::-moz-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	/*color: #a09f9f !important;*/
+	color: #ffffff !important;
 } 
 .intro_input:-ms-input-placeholder
 { 
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	/*color: #a09f9f !important;*/
+	color: #ffffff !important;
 }
 .intro_input::input-placeholder
 {
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
-	/*color: #a09f9f !important;*/
+	color: #ffffff !important;
 }
 .intro_button
 {
