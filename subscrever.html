@@ -77,6 +77,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 	</div>
 
+	<!-- Discount modal -->
+	
+	<div class="modal fade" id="promomodal" tabindex="-1" role="dialog" aria-labelledby="promomodal" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="extra_content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+					<div class="logo">
+						<a href="#">
+							<div>Médico em<span>Casa</span></div>
+							<div>O seu médico ao domicílio</div>
+						</a>
+					</div>
+					<br/><br/>
+					<center><h4>Desconto na subscrição</h4></center>
+					<br/>
+						<div class="cta_phone ml-lg-auto"><a id="" style="color:white">OFERTA SÓ HOJE</a></div>
+					<br/>
+					<center><h5>Apenas hoje oferta dos 2 primeiros meses <b>grátis</b>.</h5>
+					<div class="extra_text">Equivale à oferta de 20€ no plano individual e 40€ no plano familiar. Basta subscrever o nosso serviço online, o desconto é aplicado automaticamente.</div></center>
+
+			</div>
+		  </div>
+	</div>
+
+	<script>
+		setTimeout(function() {
+		    $('#promomodal').modal('toggle');
+		}, 20000);
+	</script>
+
 	<!-- Intro -->
 
 	<div class="intro">
@@ -174,6 +206,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="row">
 									<div class="button button_1 trans_200 mr-2 mt-2" style="white-space: nowrap;"><a href="/subscribe">Subscrever Online</b></a></div>
 									<div class="button button_2 trans_200 mt-2" style="white-space: nowrap;"><a href="#pedir_contacto">Pedir contacto</b></a></div>
+
+									<div class="button button_1 trans_200" style="white-space: nowrap;"><a data-toggle="modal" data-target="#promomodal">Chamar médico</a></div>
 							</div>
 						</div>
 					</div>
