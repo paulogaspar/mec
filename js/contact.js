@@ -95,11 +95,10 @@ $(document).ready(function()
 
 	/* Setup Stripe payments. */
 	var planID1 = "", planID2 = "";
+	/*var host = "https://server.medico.casa";*/
+    var host = "http://localhost:8084";
     function setupStripe()
     {
-    	var host = "https://server.medico.casa";
-    	/*var host = "http://localhost:8084";*/
-
     	/* Get your Stripe public key to initialize Stripe.js */
 		fetch(host + "/setup")
 		  .then(function(result) {
@@ -200,6 +199,8 @@ $(document).ready(function()
     	// Get data to send form
     	var dataObj = buildFormObject();
 
+    	/*console.log(JSON.stringify(dataObj));*/
+    	
     	// Sending method
     	dataObj['send_sms'] = true;
 
