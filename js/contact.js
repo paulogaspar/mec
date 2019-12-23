@@ -105,7 +105,7 @@ $(document).ready(function()
     function setupStripe()
     {
     	/* Get your Stripe public key to initialize Stripe.js */
-		fetch(host + "/setup")
+		fetch(this.host + "/setup")
 		  .then(function(result) {
 		    return result.json();
 		  })
@@ -130,7 +130,7 @@ $(document).ready(function()
 		  		var dataObj = buildFormObject();
 
 		  		// Create Checkout Session
-		  		var createCheckoutSession = await fetch(host + "/create-checkout-session", {
+		  		var createCheckoutSession = await fetch(this.host + "/create-checkout-session", {
 				    method: "POST",
 				    headers: {"Content-Type": "application/json"},
 				    body: JSON.stringify(dataObj)
@@ -210,7 +210,7 @@ $(document).ready(function()
     	dataObj['send_sms'] = true;
 
     	// Contact server to send message with link
-    	var sendFormRequest = await fetch(host + "/send", {
+    	var sendFormRequest = await fetch(this.host + "/send", {
 				    method: "POST",
 				    headers: {"Content-Type": "application/json"},
 				    body: JSON.stringify(dataObj)
