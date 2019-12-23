@@ -90,13 +90,18 @@ $(document).ready(function()
 				sendForm();
 			});
 		}
+		if (searchParams.has('hidehf'))
+		{
+			$('.home').css('height', '0px');
+			$('.footer').css('height', '0px');
+		}
 	}
 
 
 	/* Setup Stripe payments. */
 	var planID1 = "", planID2 = "";
-	/*var host = "https://server.medico.casa";*/
-    var host = "http://localhost:8084";
+	var host = "https://server.medico.casa";
+    /*var host = "http://localhost:8084";*/
     function setupStripe()
     {
     	/* Get your Stripe public key to initialize Stripe.js */
@@ -200,7 +205,7 @@ $(document).ready(function()
     	var dataObj = buildFormObject();
 
     	/*console.log(JSON.stringify(dataObj));*/
-    	
+
     	// Sending method
     	dataObj['send_sms'] = true;
 
