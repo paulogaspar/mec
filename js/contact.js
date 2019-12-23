@@ -94,6 +94,16 @@ $(document).ready(function()
 		{
 			$('.home').css('height', '0px');
 			$('.footer').css('height', '0px');
+			$('.arrow ').css('display', 'none');
+		}
+		if (searchParams.has('hideform'))
+		{
+			$('.contact_form_container').css('display', 'none');
+		}
+		if (searchParams.has('hidechat'))
+		{
+			$('.fb-customerchat').css('display', 'none');
+			
 		}
 	}
 
