@@ -100,12 +100,13 @@ $(document).ready(function()
 
 	/* Setup Stripe payments. */
 	var planID1 = "", planID2 = "";
-	var host = "https://server.medico.casa";
-    /*var host = "http://localhost:8084";*/
     function setupStripe()
     {
+    	var host = "https://server.medico.casa";
+    	/*var host = "http://localhost:8084";*/
+    	
     	/* Get your Stripe public key to initialize Stripe.js */
-		fetch(this.host + "/setup")
+		fetch(host + "/setup")
 		  .then(function(result) {
 		    return result.json();
 		  })
@@ -130,7 +131,7 @@ $(document).ready(function()
 		  		var dataObj = buildFormObject();
 
 		  		// Create Checkout Session
-		  		var createCheckoutSession = await fetch(this.host + "/create-checkout-session", {
+		  		var createCheckoutSession = await fetch(host + "/create-checkout-session", {
 				    method: "POST",
 				    headers: {"Content-Type": "application/json"},
 				    body: JSON.stringify(dataObj)
@@ -210,7 +211,7 @@ $(document).ready(function()
     	dataObj['send_sms'] = true;
 
     	// Contact server to send message with link
-    	var sendFormRequest = await fetch(this.host + "/send", {
+    	var sendFormRequest = await fetch(host + "/send", {
 				    method: "POST",
 				    headers: {"Content-Type": "application/json"},
 				    body: JSON.stringify(dataObj)
