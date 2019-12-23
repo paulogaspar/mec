@@ -99,21 +99,19 @@ $(document).ready(function()
 
 
 	/* Setup Stripe payments. */
-	var planID1 = "", planID2 = "";
     function setupStripe()
     {
-    	var host = "https://server.medico.casa";
-    	/*var host = "http://localhost:8084";*/
-    	
+		window.host = "https://server.medico.casa"; /*"http://localhost:8084";*/
+
     	/* Get your Stripe public key to initialize Stripe.js */
-		fetch(host + "/setup")
+		fetch(window.host + "/setup")
 		  .then(function(result) {
 		    return result.json();
 		  })
 		  .then(function(json) {
 		    var publicKey = json.publicKey;
-		    planID1 = json.Plan1;
-		    planID2 = json.Plan2;
+		    window.planID1 = json.Plan1;
+		    window.planID2 = json.Plan2;
 
 		    var stripe = Stripe(publicKey);
 		    
@@ -131,7 +129,7 @@ $(document).ready(function()
 		  		var dataObj = buildFormObject();
 
 		  		// Create Checkout Session
-		  		var createCheckoutSession = await fetch(host + "/create-checkout-session", {
+		  		var createCheckoutSession = await fetch(window.host + "/create-checkout-session", {
 				    method: "POST",
 				    headers: {"Content-Type": "application/json"},
 				    body: JSON.stringify(dataObj)
@@ -211,7 +209,7 @@ $(document).ready(function()
     	dataObj['send_sms'] = true;
 
     	// Contact server to send message with link
-    	var sendFormRequest = await fetch(host + "/send", {
+    	var sendFormRequest = await fetch(window.host + "/send", {
 				    method: "POST",
 				    headers: {"Content-Type": "application/json"},
 				    body: JSON.stringify(dataObj)
@@ -233,9 +231,9 @@ $(document).ready(function()
   		var selectedPlan = $("input[name='PlanSelection']:checked").val();
   		var selectedPlanID = "";
   		if (selectedPlan == "plan1") {
-  			selectedPlanID = planID1;
+  			selectedPlanID = window.planID1;
   		} else {
-  			selectedPlanID = planID2;
+  			selectedPlanID = window.planID2;
   		}
 
   		// Build data object
