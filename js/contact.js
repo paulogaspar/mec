@@ -87,7 +87,8 @@ $(document).ready(function()
 		{
 			$('#send-form-button').show();
 			$("#send-form-button").click(function() {
-				sendForm();
+				$('#send-form-button').text('A enviar SMS...');
+				var result = sendForm();
 			});
 		}
 		if (searchParams.has('hidehf'))
@@ -207,6 +208,7 @@ $(document).ready(function()
     {
     	// Phone number required
     	if ($('#inputTelefone').val() == '') {
+    		$('#send-form-button').text('NUMERO DE TELEMOVEL NECESSARIO. Tente de novo.');
     		return 0;
     	}
 
@@ -228,10 +230,12 @@ $(document).ready(function()
 
   		// Error sending message
   		if (result.success == false) {
+  			$('#send-form-button').text('ERRO A ENVIAR SMS. Verique dados e tente de novo.');
   			return 1;
   		}
 
   		// Success
+  		$('#send-form-button').text('SMS Enviada! (pode demorar alguns minutos)');
   		return 2;    }
 
     function buildFormObject()
