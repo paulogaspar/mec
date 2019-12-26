@@ -85,7 +85,7 @@ $(document).ready(function()
 		var searchParams = new URLSearchParams(window.location.search);
 		if (searchParams.has('sendenabled'))
 		{
-			$('#send-form-button').show();
+			$('#extracontrols').show();
 			$("#send-form-button").click(function() {
 				$('#send-form-button').text('A enviar SMS...');
 				var result = sendForm();
@@ -212,6 +212,12 @@ $(document).ready(function()
     		return 0;
     	}
 
+    	// Plan required
+    	if ($("input[name='PlanSelection']:checked").val() == '') {
+    		$('#send-form-button').text('NECESSARIO ESCOLHER PLANO. Tente de novo.');
+    		return 0;
+    	}
+
     	// Get data to send form
     	var dataObj = buildFormObject();
 
@@ -219,6 +225,9 @@ $(document).ready(function()
 
     	// Sending method
     	dataObj['send_sms'] = true;
+
+    	// What type of payment to send to client
+    	dataObj['payment_type'] = $("input[name='PaymentType']:checked").val();
 
     	// Contact server to send message with link
     	var sendFormRequest = await fetch(window.host + "/send", {
