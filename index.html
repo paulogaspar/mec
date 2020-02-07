@@ -217,20 +217,6 @@
 		</div>
 	</div>
 
-
-	<!-- Begin Inspectlet Asynchronous Code -->
-	<script type="text/javascript">
-	(function() {
-	window.__insp = window.__insp || [];
-	__insp.push(['wid', 2053444522]);
-	var ldinsp = function(){
-	if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=2053444522&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
-	setTimeout(ldinsp, 0);
-	})();
-	</script>
-	<!-- End Inspectlet Asynchronous Code -->
-
-
 	<!-- Intro -->
 
 	<div class="intro" id="intro">
@@ -291,7 +277,7 @@
 								document.getElementById('intro_form_thankyou').style.display = 'block';
 							}
 						</script>
-						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="visit scheduler"></iframe>
 						<form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe6fWLmSZE_eNy8JND5lh6CA_xGIsTY0GDwDx-0kNwk9VrI_Q/formResponse" class="intro_form" id="intro_form" target="hidden_iframe" onsubmit="hideform()">
 							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
 								<input name="entry.316678319" type="text" class="intro_input" placeholder="O seu nome" required="required">
@@ -676,8 +662,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pt_PT/sdk/xfbml.customerchat.js';
+  js.async=true;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<!-- End Facebook Code -->
+
+
+<!-- Begin Inspectlet Asynchronous Code -->
+<script type="text/javascript">
+(function() {
+window.__insp = window.__insp || [];
+__insp.push(['wid', 2053444522]);
+var ldinsp = function(){
+if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=2053444522&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+setTimeout(ldinsp, 0);
+})();
+</script>
+<!-- End Inspectlet Asynchronous Code -->
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-134944463-1"></script>
