@@ -16,7 +16,6 @@
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-datetimepicker.min.css" media="screen">
 
-
 </head>
 <body>
 
@@ -662,7 +661,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pt_PT/sdk/xfbml.customerchat.js';
-  js.async=true;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- End Facebook Code -->
@@ -689,7 +687,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PTNZXCB');</script>
 <!-- End Google Tag Manager -->
 
-<script src="https://js.stripe.com/v3/"></script>
+<script defer src="https://js.stripe.com/v3/"></script>
 
 </body>
 </html>
