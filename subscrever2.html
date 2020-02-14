@@ -1,0 +1,415 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Médico em Casa</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900' rel='stylesheet'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <style amp-custom>
+        :root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}footer,nav{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex="-1"]:focus{outline:0 }h2,h3,h4{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}dl,ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}b,strong{font-weight:bolder}small{font-size:80%}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([tabindex]){color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}code{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}img{vertical-align:middle;border-style:none}svg:not(:root){overflow:hidden;vertical-align:middle}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=date],input[type=datetime-local],input[type=month],input[type=time]{-webkit-appearance:listbox}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}[hidden]{display:none }.h2,.h3,.h4,h2,h3,h4{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}.h2,h2{font-size:2rem}.h3,h3{font-size:1.75rem}.h4,h4{font-size:1.5rem}.small,small{font-size:80%;font-weight:400}code{font-size:87.5%;color:#e83e8c;word-break:break-word}a>code{color:inherit}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1170px}}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col,.col-lg-3,.col-lg-5,.col-lg-7{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}@media (min-width:992px){.col-lg-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-lg-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-lg-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}}.nav{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none}@-webkit-keyframes progress-bar-stripes{to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0}.carousel{position:relative}.d-flex{display:-ms-flexbox ;display:flex }.flex-row{-ms-flex-direction:row ;flex-direction:row }.flex-column{-ms-flex-direction:column ;flex-direction:column }.flex-wrap{-ms-flex-wrap:wrap ;flex-wrap:wrap }.justify-content-start{-ms-flex-pack:start ;justify-content:flex-start }.justify-content-center{-ms-flex-pack:center ;justify-content:center }.justify-content-between{-ms-flex-pack:justify ;justify-content:space-between }.align-items-start{-ms-flex-align:start ;align-items:flex-start }.align-items-center{-ms-flex-align:center ;align-items:center }@media (min-width:768px){.flex-md-row{-ms-flex-direction:row ;flex-direction:row }.align-items-md-center{-ms-flex-align:center ;align-items:center }}@media (min-width:992px){.flex-lg-row{-ms-flex-direction:row ;flex-direction:row }.align-items-lg-center{-ms-flex-align:center ;align-items:center }}.mt-2{margin-top:.5rem }.mr-2{margin-right:.5rem }.mb-2{margin-bottom:.5rem }.ml-3{margin-left:1rem }.mb-4{margin-bottom:1.5rem }.mt-5{margin-top:3rem }.mb-5{margin-bottom:3rem }@media (min-width:768px){.ml-md-auto{margin-left:auto }}@media (min-width:992px){.ml-lg-auto{margin-left:auto }}@media print{*,::after,::before{text-shadow:none ;box-shadow:none }a:not(.btn){text-decoration:underline}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}@page{size:a3}body{min-width:992px }.container{min-width:992px }}
+
+
+        *{margin:0;padding:0;-webkit-font-smoothing:antialiased;-webkit-text-shadow:rgba(0,0,0,.01) 0 0 1px;text-shadow:rgba(0,0,0,.01) 0 0 1px}body{font-family:Montserrat,sans-serif;font-size:14px;font-weight:400;background:#fff;color:#a5a5a5}div{display:block;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}ul{list-style:none;margin-bottom:0}p{font-family:Montserrat,sans-serif;font-size:14px;line-height:2.14;font-weight:500;color:#828282;-webkit-font-smoothing:antialiased;-webkit-text-shadow:rgba(0,0,0,.01) 0 0 1px;text-shadow:rgba(0,0,0,.01) 0 0 1px}p a{display:inline;position:relative;color:inherit;border-bottom:solid 1px #ffa07f;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}p:last-of-type{margin-bottom:0}a{-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}a,a:active,a:hover,a:link,a:visited{text-decoration:none;-webkit-font-smoothing:antialiased;-webkit-text-shadow:rgba(0,0,0,.01) 0 0 1px;text-shadow:rgba(0,0,0,.01) 0 0 1px}p a:active{position:relative;color:tomato}p a:hover{color:#fff;background:#ffa07f}p a:hover::after{opacity:.2}::selection{background:rgba(87,204,195,.75);color:#fff}h2{font-size:48px}h3{font-size:36px}h4{font-size:24px}h2,h3,h4{font-family:Montserrat,sans-serif;-webkit-font-smoothing:antialiased;-webkit-text-shadow:rgba(0,0,0,.01) 0 0 1px;text-shadow:rgba(0,0,0,.01) 0 0 1px;line-height:1.2;color:#404040}.trans_200{-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.super_container{width:100%;overflow:hidden}.background_image{position:absolute;top:0;left:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:center center}.button{height:46px;border-radius:20px}.button a{display:block;padding-left:40px;padding-right:36px;line-height:42px;font-size:14px;text-transform:uppercase;font-weight:600}.button_1{background:#fd556d;border:solid 2px transparent}.button_1 a{color:#fff}.button_1:hover{background:0 0;border:solid 2px #fd556d}.button_1:hover a{color:#fd556d}.button_2{background:0 0;border:solid 2px #57ccc3}.button_2 a{color:#57ccc3}.button_2:hover{background:#57ccc3}.button_2:hover a{color:#fff}.section_subtitle{font-size:18px;font-weight:500;color:#a6abb2;line-height:.75}.section_title{margin-top:9px}.intro_text{margin-top:32px}.logo a>div:first-child{font-size:30px;font-weight:700;line-height:.75;color:#353535}.logo a>div:first-child span{color:#57ccc3;margin-left:7px}.logo a>div:last-child{font-size:12px;color:#969696;font-weight:500;line-height:.75;margin-top:6px}.home2{width:100%;height:768px;margin-top:0}.home_slider_container{width:100%;height:100%}.home_container{position:absolute;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);left:0;width:100%}.home_content{max-width:650px}.home_subtitle{font-size:30px;color:#57ccc3;font-weight:600;line-height:1.1}.home_title{font-size:50px;color:#404040;line-height:1.2;font-weight:500;margin-top:-2px}.home_text{margin-top:11px}.home_buttons{margin-top:36px}.home_buttons>div:not(:last-child){margin-right:10px}.intro{width:100%;background:#fff;padding-top:89px;padding-bottom:90px}.intro_content{padding-top:0;margin-top:-30px}.intro_form_container{width:100%;background:#fff;padding-left:33px;padding-right:34px;padding-bottom:63px;padding-top:136px;box-shadow:0 25px 38px rgba(0,0,0,.2)}.intro_form_title{position:absolute;top:0;left:0;width:336px;height:80px;background:#57ccc3;line-height:80px;text-align:center;font-size:24px;font-weight:600;color:#fff}.intro_form{width:100%}.intro_input{width:calc((100% - 15px)/ 2);height:62px;background:0 0;border:solid 2px #e6ebf1;margin-bottom:18px;padding-left:25px;outline:0;font-size:15px;color:#404040;font-weight:500;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}.intro_input:focus,.intro_input:hover{border:solid 2px #f5f5f5}.intro_input::-webkit-input-placeholder{font-size:14px ;font-weight:400 ;font-style:italic;color:#fff }.intro_input:-moz-placeholder{font-size:14px ;font-weight:400 ;font-style:italic;color:#fff }.intro_input::-moz-placeholder{font-size:14px ;font-weight:400 ;font-style:italic;color:#fff }.intro_input:-ms-input-placeholder{font-size:14px ;font-weight:400 ;font-style:italic;color:#fff }.intro_input::input-placeholder{font-size:14px ;font-weight:400 ;font-style:italic;color:#fff }.intro_button{width:100%;font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;border:solid 2px transparent;cursor:pointer}.intro_button:hover{background:0 0;border:solid 2px #fd556d;color:#fd556d}.why_list{margin-top:37px}.why_list ul li:not(:last-of-type){margin-bottom:31px}.icon_container{width:61px;height:61px;border-radius:50%;background:#6bdbd2}.icon{width:32px;height:32px}.icon img{max-width:100%}.why_list_content{padding-left:37px}.why_list_title{font-size:18px;font-weight:600;color:#404040;line-height:1.2}.why_list_text{font-size:14px;font-weight:500;color:#868686}.cta{width:100%;background:#57ccc3;padding-top:49px;padding-bottom:46px}.cta_title{font-size:36px;font-weight:600;color:#fff;line-height:1.2}.cta_text{font-size:14px;font-weight:500;color:#fff;line-height:2;margin-top:-1px}.cta_phone{height:59px;padding-left:24px;padding-right:25px;line-height:59px;text-align:center;font-size:30px;font-weight:600;color:#fff;background:#ee4860;border-radius:19px;white-space:nowrap}.services{background:#fff;padding-top:91px;padding-bottom:25px}.footer{display:block;position:relative;background:#26292d}.footer_content{padding-top:94px;padding-bottom:51px}.footer_about{padding-top:19px}.footer_logo a>div:first-child{font-size:30px;font-weight:700;line-height:.75;color:#fff}.footer_logo a>div:first-child span{color:#57ccc3;margin-left:7px}.footer_logo a>div:last-child{font-size:12px;color:#969696;font-weight:500;line-height:.75;margin-top:6px}.footer_about_text{margin-top:42px}.footer_about_text p{color:#868686}.footer_title{font-size:16px;font-weight:500;color:#fff;line-height:1.2}.footer_contact{padding-top:40px}.contact_list{margin-top:44px}.contact_list li{font-size:15px;font-weight:500;color:#878787}.contact_list li:not(:last-child){margin-bottom:12px}.footer_location{padding-top:40px}.locations_list{max-width:180px;margin-top:42px}.locations_list li{line-height:1.6}.locations_list li:not(:last-child){margin-bottom:19px}.location_title{font-size:15px;font-weight:500;color:#57ccc3}.location_text{margin-top:13px}.opening_hours{left:-32px;width:calc(100% + 67px);padding-left:32px;padding-right:35px;padding-top:38px;padding-bottom:40px;border:solid 2px #4d5157}.opening_hours_list{margin-top:44px}.opening_hours_list li{white-space:nowrap}.opening_hours_list li:not(:last-child){margin-bottom:9px}.footer_bar{width:100%;background:#181a1d}.footer_bar_content{height:49px}.copyright{font-size:12px;font-weight:500;color:#646464}.footer_nav ul li:not(:last-child){margin-right:29px}.footer_nav ul li a{font-size:12px;font-weight:500;color:#818181}.footer_nav ul li a:hover{color:#57ccc3}#presentation_buttons{display:none}
+
+
+        @media only screen and (max-width:991px){.intro_form_container{margin-top:102px}.cta_phone{margin-top:33px}.footer_col:not(:last-child){margin-bottom:80px}.footer_contact,.footer_location{padding-top:0}#presentation_buttons{display:unset}}@media only screen and (max-width:767px){.home_content{max-width:100%}.home_title{font-size:40px}.home_subtitle{font-size:24px}.footer_bar_content{height:auto;padding-top:30px;padding-bottom:30px}.footer_nav{margin-top:15px}}@media only screen and (max-width:575px){p{font-size:13px}h2{font-size:36px}.logo a>div:first-child{font-size:24px}.logo a>div:last-child{font-size:10px}.section_subtitle{font-size:16px}.button{height:40px}.button a{font-size:12px;line-height:36px;padding-left:31px;padding-right:30px}.home_subtitle{font-size:18px}.home_title{font-size:30px}.cta_title{font-size:28px}.cta_phone{font-size:24px}.opening_hours{left:auto;width:100%}}
+        @media only screen and (max-width:1400px){.intro{padding-top: 0px;}}
+        @media only screen and (max-width:1200px){.intro{padding-top: 50px;}}
+        /* br.ljk{display: none;} */
+        @media only screen and (max-width:450){br.ljk{display: block;} .home_container{top: 36% !important;-webkit-transform:translateY(-30%);-moz-transform:translateY(-30%);-ms-transform:translateY(-30%);-o-transform:translateY(-30%);transform:translateY(-30%);}}
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="super_container">
+	
+        <!-- Home -->
+        <div class="home2">
+            
+            <!-- Home Slider -->
+            <div class="">
+                <div class="">
+                    
+                    <!-- Slide -->
+                    <div class="">
+                        <div class="">
+                            <amp-img src="https://medico.casa/images/extra2.jpg" height="760" width="1600" layout="fixed" alt="" style="background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center center;">
+                        </div>
+                        <div class="home_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="home_content">
+                                            
+                                            <!-- Logo -->
+                                            <div class="logo mb-5">
+                                                <a href="#">
+                                                    <div class="mb-2">Médico em<span>Casa</span></div>
+                                                    <div>O médico que precisa agora</div>
+                                                </a>
+                                            </div>
+    
+                                            <!-- <div class="home_subtitle">Serviço médico ao domicílio</div> -->
+                                            <div class="home_title">Sem filas.<br/>Sem hospitais.<br/>Sem custos excessivos.<br/><b>No conforto da sua casa.</b></div>
+                                            <div class="home_text">
+                                                <p>Um serviço especializado de médico ao domicílio é tudo o que precisa.<br/>Por <b>apenas 10€/mês</b> tenha um médico sempre que necessitar, sem sair de casa.</p>
+                                            </div>
+                                            <div class="home_buttons d-flex flex-row align-items-center justify-content-start">
+                                                <div class="button button_2 trans_200" style="white-space: nowrap;"><a id="knowmore" href="#intro">Saber mais</a></div>
+                                                
+                                                <!-- <div class="button button_1 trans_200" style="white-space: nowrap;"><a href="/subscribe">Subscrever</a></div> -->
+                                                <div class="button button_1 trans_200" style="white-space: nowrap;"><a href="#pedir_contacto">Quero ser contactado</a></div>
+                                            </div>
+                                            <!-- <div class="home_text">
+                                            <p style="margin-top: 100px">
+                                                <small>* valor médio estimado de 20 minutos, poderá variar em função de factores externos como o trânsito.</small>
+                                            </p>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+
+      
+    
+        
+        <!--script>
+            setTimeout(function() {
+                $('#promomodal').modal('toggle');
+            }, 20000);
+        </script-->
+    
+        <!-- Intro -->
+    
+        <div class="intro">
+            <div class="container">
+                <div class="row">
+    
+                    <!-- Intro Content -->
+                    <div class="col-lg-7 intro_col">
+                        <div class="intro_content">
+                            <div class="section_title_container">
+                                <div id="intro" class="section_subtitle">Médico em Casa</div>
+                                <!--div class="section_title"><h2>Médico ao domicílio por 10€ / mês</h2></div-->
+                                <div class="section_title"><h3>Sabe porque é que precisa de um serviço médico ao domicílio?</h3></div>
+                            </div>
+                            <div class="intro_text">
+                                <p>Ter um serviço médico ao domicílio é essencial hoje em dia.</p>
+                            </div>
+    
+                            <div class="why_list">
+                                <ul>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">TEMPOS DE ESPERA EM SALAS DE HOSPITAIS</div>
+                                            <div class="why_list_text">Os tempos de espera nos hospitais são inaceitáveis. Este inverno os tempos chegaram a ser de <strong>8 horas numa sala de espera</strong>. Se é para esperar é sempre melhor esperar no conforto da sua casa.
+                                            É ainda mais difícil para quem tem filhos: não é pratico ter de <strong>faltar a um dia de trabalho</strong> para levá-los ao hospital.
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">SE ESTÁ DOENTE, NÃO QUER SAIR DE CASA</div>
+                                            <div class="why_list_text">Quando se está doente sem conseguir sair de casa é contraproducente sair para ir a um hospital. Nessas situações ninguém quer deixar o conforto da casa para ir para o frio, sentar-se numa cadeira de plástico do hospital durante horas.</div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">SEM PÂNICO ÀS 4h DA MANHÃ</div>
+                                            <div class="why_list_text">Quando você - ou a sua criança - está doente durante a noite, certamente não quer sair de casa às 4h da manhã. O mais provável é <strong>o pior cenário de todos: vai deixar-se ficar doente em casa</strong>, num sofrimento desnecessário. O nosso serviço trabalha 24h, podemos enviar um médico a sua casa a qualquer hora.</div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">MAIS BARATO QUE UM SEGURO DE SAÚDE</div>
+                                            <div class="why_list_text">Não pague por aquilo que não vai usar. Um seguro de saúde não é para todas as carteiras e muitas vezes está a pagar um valor que não reflecte o uso que lhe vai dar. Os casos médicos mais frequentes podem ser observados por um médico em sua casa.</div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">MELHOR PARA IDOSOS E CRIANÇAS</div>
+                                            <div class="why_list_text">Quem tem familiares idosos ou cuida deles sabe que leva-los a ver um médico é muitas vezes complicado. Seja porque eles próprios oferecem resistência (sabem as condições que poderão encontrar: muito tempo de espera, muita confusão, <strong>possibilidade de ficarem numa maca num corredor</strong>, etc.), ou por medo dos familiares de que a ida ao hospital os acabe por contagiar e saiam de lá pior do que entraram, e por questões de difícil mobilidade e deslocação.</div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">TER UM MÉDICO AO TELEFONE</div>
+                                            <div class="why_list_text">É muito frequente que hajam questões médicas onde não seja necessária uma consulta presencial e baste falar telefonicamente com um médico.</div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">NÃO SE ESCOLHE QUANDO FICAMOS DOENTES</div>
+                                            <div class="why_list_text">E por isso estamos sempre disponíveis quando precisar, 24 horas por dia, todos os dias do ano. A nossa infraestrutura tem um call-center sempre activo e <strong>uma frota com médicos em constante circulação na rua</strong>.</div>
+                                        </div>
+                                    </li>
+    
+                                    <!-- Why List Item -->
+                                    <li class="d-flex flex-row align-items-center justify-content-start">
+                                        <div class="icon_container d-flex flex-column align-items-center justify-content-center" style="background: none;">
+                                            <div class="icon"><amp-img layout="responsive" height="32" width="32" src="https://medico.casa/images/icon_2.svg" alt="https://www.flaticon.com/authors/prosymbols" style="filter: invert(26%) sepia(58%) saturate(369%) hue-rotate(122deg) brightness(88%) contrast(88%);"></div>
+                                        </div>
+                                        <div class="why_list_content">
+                                            <div class="why_list_title">O MESMO PROFISSIONALISMO MÉDICO</div>
+                                            <div class="why_list_text">Os nossos médicos têm vasta experiência nas mais variadas e frequentes situações que requeiram observação e tratamento e <strong>podem prescrever receitas médicas, atestados ou exames durante as visitas</strong> caso vejam necessário.</div>
+                                        </div>
+                                    </li>
+    
+                                    <li class="d-flex mt-5">
+                                        <div class="mt-2 ml-3" id="presentation_buttons">
+                                            <div class="row">
+                                                    <div class="button button_1 trans_200 mr-2 mt-2" style="white-space: nowrap;"><a href="/subscribe">Subscrever</b></a></div>
+                                                    <div class="button button_2 trans_200 mt-2" style="white-space: nowrap;"><a href="#pedir_contacto">Quero ser contactado</b></a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                </ul>
+    
+                            </div>
+    
+                            <p>Subscreva o nosso plano mensal para ter um serviço de médico ao domicílio de excelência, sempre que necessitar. Suportados por uma infraestrutura com mais de 30 anos de experiência em medicina domiciliar.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Intro Form -->
+                    <div class="col-lg-5 intro_col">
+                        
+                        <div class="intro_form_container">
+                            <div class="intro_form_title">Subscreva o serviço</div>
+                            <ul>
+                                <p><strong>Médicos sempre disponíveis</strong></p>
+                                <li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; Grande Lisboa e Grande Porto (consulte <a href="https://medico.casa/subscribe">condições</a>)</li>
+                                <li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; 24h por dia, todos os dias do ano</li>
+                                <li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; Médicos de clinica geral</li>
+                            </ul>
+                            <br>
+                            <ul>
+                                <p><strong>Preço</strong></p>
+                                <li><h4><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; Apenas 10€/mês</h4></li>
+                                <li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; 10€ em cada consulta</li>
+                                
+                            </ul>
+                            <br>
+                            <ul>
+                                <p><strong>Sem Fidelizações</strong></p>
+                                <li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; Pagamentos trimestrais, cancele a qualquer momento.</li>
+                                <li><i class="fa fa-arrow-right mt-2" style="color: #57ccc3" aria-hidden="true"></i>&nbsp; Sem limites de utilização.</li>
+                            </ul>
+                            <br>
+                            <div class="mt-2">
+                                <div class="row">
+                                        <div class="button button_1 trans_200 mr-2 mt-2" style="white-space: nowrap;"><a href="/subscribe">Subscrever</a></div>
+                                        <div class="button button_2 trans_200 mt-2" style="white-space: nowrap;"><a href="#pedir_contacto">Pedir contacto</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Call to action -->
+    
+        <div class="cta" id="pedir_contacto">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+                            <div class="cta_content mb-4">
+                                <div class="cta_title">Dúvidas? Nós telefonamos!</div>
+                                <div class="cta_text">Deixe o seu nome e contacto que nós telefonamos</div>
+                            </div>
+                                <!-- <div class="cta_phone ml-lg-auto"><a id="callme6" style="color:white" href="tel:+351308808653">308 808 653</a></div> -->
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="cta_container" style="min-width: 300px;">
+                            <form method="post"
+                            action-xhr="https://example.com/subscribe"    target="_top" class="intro_form" id="intro_form" role="" tabindex=""  on="tap:intro_form.hide,intro_form_thankyou.show">
+                                <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+                                    <input name="entry.1653404171" type="text" class="intro_input" placeholder="NOME" required>
+                                    <input name="entry.768254246" type="tel" class="intro_input" placeholder="TELEFONE" required>
+                                </div>
+                                <button id="askforcontact" class="button button_1 intro_button trans_200">Pedir para ser contactado</button>
+                            </form>
+                            <div id="intro_form_thankyou" hidden>
+                                <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+                                    <h3>Registámos o seu pedido!</h3>
+                                    <p>Entraremos em contacto o mais brevemente possível.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Footer -->
+    
+        <footer class="footer">
+            <div class="footer_content">
+                <div class="container">
+                    <div class="row">
+    
+                        <!-- Footer About -->
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_about">
+                                <div class="footer_logo">
+                                    <a href="#">
+                                        <div>Médico em<span>Casa</span></div>
+                                        <div>O médico que precisa agora</div>
+                                    </a>
+                                </div>
+                                <div class="footer_about_text">
+                                    <p>O Médico em Casa é um serviço especializado de medicina ao domicílio. Todos os dias, 24h por dia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Empty column -->
+                        <!--div class="col-lg-3 footer_col">
+                        </div-->
+    
+                        <!-- Footer Opening Hours -->
+                        <div class="col-lg-3 footer_col">
+                            <!--div class="opening_hours">
+                                <div class="footer_title">Horário</div>
+                                <ul class="opening_hours_list">
+                                    <li class="d-flex flex-row align-items-start justify-content-start">
+                                        <div>Todos os dias - 24h / dia</div>
+                                    </li>
+                                </ul>
+                            </div-->
+                        </div>
+    
+                        <!-- Footer Contact Info -->
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_contact">
+                                <div class="footer_title">Contactos</div>
+                                <ul class="contact_list">
+                                    <li><div class="location_title">Pedido de médico:</div></li>
+                                    <li>308 808 653</li>
+                                    <br/>
+                                    <li><div class="location_title">Subscrições:</div></li>
+                                    <li>308 808 037</li>
+                                    <br/>
+                                    <li><div class="location_title">Geral:</div></li>
+                                    <li>geral@medico.casa</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <!-- Footer Locations -->
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_location">
+                                <div class="footer_title">Localização</div>
+                                <ul class="locations_list">
+                                    <li>
+                                        <div class="location_title">Grande Lisboa</div>
+                                        <div class="location_text">Lisboa, Oeiras, Cascais, Sintra, Amadora, Odivelas, Loures, Vila Franca de Xira</div>
+                                        <br/>
+                                        <div class="location_title">Setúbal</div>
+                                        <div class="location_text">Almada, Barreiro, Montijo, Seixal, Moita, Alcochete</div>
+                                        <br/>
+                                        <div class="location_title">Grande Porto</div>
+                                        <div class="location_text">Porto, Vila Nova de Gaia, Matosinhos, Gondomar, Valongo, Maia, Paredes</div>
+                                        <br/>
+                                        <div class="location_title">Algarve</div>
+                                        <div class="location_text">Lagos, Portimão, Lagoa, Albufeira, Loulé, Faro, Olhão, Tavira, Aljezur</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="footer_bar_content  d-flex flex-md-row flex-column align-items-md-center justify-content-start">
+                                <div class="copyright">
+    Copyright &copy;2020 All rights reserved | This page was made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" style="color:gray" target="_blank">Colorlib</a>
+    </div>
+                                <nav class="footer_nav ml-md-auto">
+                                    <ul class="d-flex flex-row align-items-center justify-content-start">
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>			
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>
