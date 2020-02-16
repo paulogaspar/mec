@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
+    <title>Médico en Casa</title>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	
@@ -71,6 +71,7 @@
         padding-left: 10px;
 			}
       .owl-carousel .owl-item img{width: 129% !important;}
+      .home_subtitle{margin-bottom: 4px !important;margin-top: 100px;}
 		}
     @media only screen and (max-width:350px){
       .owl-carousel .owl-item img{width: 155% !important;}
@@ -226,7 +227,7 @@ greeting_dialog_delay=6>
             </div>
     
             <!-- Hamburger -->
-            <button class="hamburger"  on="tap:trans_400j.toggleVisibility,menu_overlayj.toggleVisibility"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <!--button class="hamburger"  on="tap:trans_400j.toggleVisibility,menu_overlayj.toggleVisibility"><i class="fa fa-bars" aria-hidden="true"></i></button-->
           </div>
         </div>
       </header>
@@ -260,85 +261,7 @@ greeting_dialog_delay=6>
       </div>
       
       
-    <!-- Home -->
-    <!-- Home Slider -->
-		<!-- <div class="home_slider_container"> -->
-    <!-- <div style="position: absolute;" class="aho joa">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="home_content">
-                <div class="home_subtitle">Serviço médico ao domicílio</div>
-                <div class="home_title">Na sua casa dentro de pouco</div>
-                <div class="home_text">
-                  <p>O Médico em Casa é um serviço especializado de médicos ao domicílio. Fale connosco agora e estamos em sua casa dentro de pouco tempo*.</p>
-                </div>
-                <div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-                  <div class="button button_1 trans_200" style="white-space: nowrap;"><a id="callme4" href="tel:+351308808653">Chamar médico<p><h5>308 808 653</h5></p></a></div>
-                  <div class="button button_2 trans_200" style="white-space: nowrap;"><a href="#intro">marcar visita</a></div>
-                </div>
-                <div class="home_text">
-                <p style="margin-top: 100px">
-                  <small>* máximo de 3h, poderá variar em função de factores externos como o trânsito ou situações de epidemia.</small>
-                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div style="position: absolute;" class="aho">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="home_content">
-              <div class="home_subtitle">Serviço médico ao domicílio</div>
-              <div class="home_title">Não tem seguro de saúde?</div>
-              <div class="home_text">
-                <p>Não se preocupe. O Médico em Casa oferece preços razoáveis a quem não está coberto por um seguro. Fale com um operador, por chat ou telefone, e chame um médico ao domicílio sem medo.</p>
-              </div>
-              <div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-                <div class="button button_1 trans_200" style="white-space: nowrap;"><a id="callme5" href="tel:+351308808653">Chamar médico<p><h5>308 808 653</h5></p></a></div>
-                <div class="button button_2 trans_200" style="white-space: nowrap;"><a href="#intro">marcar visita</a></div>
-              </div>
-              <div class="home_text">
-              <p style="margin-top: 120px"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    
-			<!-- <amp-carousel width="400"
-height="300"
-layout="responsive"
-type="slides">
-  <amp-img src="https://medico.casa/images/home_slider2-min.jpg"
-  width="400"
-  height="400"
-  layout="responsive"
-  alt="a sample image">
 
-
-</amp-img>
-  
-        <amp-img src="https://medico.casa/images/home_slider-min.jpg"
-        width="400"
-        height="400"
-        layout="responsive"
-        alt="and another sample image"/>
-        <amp-fit-text>
-          <div style="position: relative;width: 100%;"></div>
-        </amp-fit-text>
-    
-</amp-carousel> -->
-
-
-
-			<!-- ----------------------------------------------------------------------------------------------------------- -->
-			<!-- ----------------------------------------------------------------------------------------------------------- -->
-      <!-- ----------------------------------------------------------------------------------------------------------- -->
       <div class="home">
 
         <!-- Home Slider -->
@@ -347,7 +270,7 @@ type="slides">
             
             <!-- Slide -->
             <div class="owl-item">
-              <div class="background_image" style=""> <img layout="fixed" src="https://medico.casa/images/home_slider-min.jpg" alt=""></div>
+              <div class="background_image" style=""><img layout="fixed" src="https://medico.casa/images/home_slider-min.jpg" alt=""></div>
               <div class="home_container">
                 <div class="container">
                   <div class="row">
@@ -448,7 +371,7 @@ type="slides">
 		<!-- </div>
   </div> -->
   <!-- Begin Inspectlet Asynchronous Code -->
-	<script type="text/javascript">
+	<!--script type="text/javascript">
     (function() {
     window.__insp = window.__insp || [];
     __insp.push(['wid', 2053444522]);
@@ -456,7 +379,7 @@ type="slides">
     if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=2053444522&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
     setTimeout(ldinsp, 0);
     })();
-    </script>
+    </script-->
     <!-- End Inspectlet Asynchronous Code -->
       
     
@@ -511,23 +434,32 @@ type="slides">
             <div class="col-lg-6 intro_col">
               <div class="intro_form_container">
                 <div class="intro_form_title">Cita Previa</div>
-                
-				<form class="intro_form" id="intro_form" method="post"
-				action-xhr="https://example.com/subscribe"    target="_top">
+        
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>        
+				        <form class="intro_form" id="intro_form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe6fWLmSZE_eNy8JND5lh6CA_xGIsTY0GDwDx-0kNwk9VrI_Q/formResponse" target="hidden_iframe">
                   <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
                     <input name="entry.316678319" type="text" class="intro_input" placeholder="Su nombre" required="required">
                     <input name="entry.1531475252" type="email" class="intro_input" placeholder="E-mail" required="required">
                     <input name="entry.646546166" type="tel" class="intro_input" placeholder="Número de telefone" required="required" pattern="[0-9 \-+]+">
                     <input name="entry.1094250517" type="text" id="datetimepicker" class="intro_input form_datetime" placeholder="Data que pretende" required="required">
-				  </div>
-					<button class="button button_1 intro_button trans_200" >pedir cita</button>
+				          </div>
+					        <button class="button button_1 intro_button trans_200">pedir cita</button>
+                  <!--label style="display: block;" for="trigger">pedir cita</label>
+                  <input id="trigger" type="checkbox" style="display: none;">
+                  <style type="text/css">
+                    .intro_form #trigger:checked {
+                      display: none;
+                    }
+                  </style-->
                 </form>
-                <div id="intro_form_thankyou" style="display: none">
-                <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-                  <h3>Recibimos su pedido.</h3>
-							<p>Le contactaremos en breves.</p>
+                
+                <div id="intro_form_thankyou" style="display: none;">
+                    <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+                        <h3>Recibimos su pedido.</h3>
+      							    <p>Le contactaremos en breves.</p>
+                    </div>
                 </div>
-                </div>
+                
               </div>
             </div>
     
@@ -704,7 +636,6 @@ type="slides">
                   <div class="extra_text">
                     <p>Tendremos un servicio médico particular de suscripción muy pronto. Con solo 10 € podrás llamar un médico en cualquier momento.</p>
                   </div>
-                  <center><div class="button button_1 extra_link trans_200"><a id="subscribe2" href="https://medico.casa/subscrever">Saiba mais</a></div></center>
                 </div>
               </div>
             </div>
