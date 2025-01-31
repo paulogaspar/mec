@@ -62,10 +62,10 @@
 				<!--div class="work_hours">Mo - Sat: 8:00am - 9:00pm</div-->
 
 				<!-- Appointment Button -->
-				<div class="button button_1 header_button"><a id="callme1" href="tel:+351308808653">Telefone: 308 808 653</a></div>
+				<div class="button button_1 header_button"><a id="callme1" href="tel:+351308808653"><b>Telefone:</b> 308 808 653</a></div>
 				
 				<!-- Header Phone -->
-				<div class="header_phone"><a href="#intro" style="color:white">Marcar Visita</a></div>
+				<!--div class="header_phone"><a href="#intro" style="color:white">Marcar Visita</a></div-->
 
 
 				<!-- Header Social -->
@@ -136,8 +136,8 @@
 											<p>O Médico em Casa é um serviço especializado de médicos ao domicílio. Fale connosco agora e estamos em sua casa dentro de pouco tempo*.</p>
 										</div>
 										<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
-											<div class="button button_1 trans_200" style="white-space: nowrap;"><a id="callme4" href="tel:+351308808653"><!--data-toggle="modal" data-target="#callmodal"-->Chamar médico<p><h5>308 808 653</h5></p></a></div>
-											<div class="button button_2 trans_200" style="white-space: nowrap;"><a href="#intro">marcar visita</a></div>
+											<div class="button button_1 trans_200" style="white-space: nowrap;"><a id="callme4" href="tel:+351308808653"><!--data-toggle="modal" data-target="#callmodal"-->Chamar médico ao domicílio<p><h5>308 808 653</h5></p></a></div>
+											<div class="button button_2 trans_200" style="white-space: nowrap;"><a href="https://novamed.pt/tele-consulta-medica/">Pedir tele-consulta</a></div>
 										</div>
 										<div class="home_text">
 										<p style="margin-top: 100px">
@@ -227,40 +227,10 @@
 					<div class="intro_content">
 						<div class="section_title_container">
 							<div class="section_subtitle">Médico em Casa</div>
-							<div class="section_title"><h2>Sinta-se melhor hoje</h2></div>
+							<div class="section_title"><h2>Prefere por telefone?</h2></div>
 						</div>
 						<div class="intro_text">
-							<p>Marque uma visita e sinta-se melhor ainda hoje. O Médico em Casa não tem fidelizações nem custos escondidos e oferece o serviço mais profissional a um preço acessível. Tosse, gripe, enjoos, constipação, febre, vómitos, dores? Evite perder tempo desnecessário em filas e esperas e tenha um médico ao domicílio dentro de nada.</p>
-							<p>Se tiver questões não hesite em falar connosco através do nosso <strong>chat, telefone, ou e-mail</strong>.</p>
-						</div>
-						<div class="milestones">
-							<div class="row milestones_row">
-							
-								<!-- Milestone -->
-								<!--div class="col-md-4 milestone_col">
-									<div class="milestone">
-										<div class="milestone_counter" data-end-value="5000" data-sign-before="+">0</div>
-										<div class="milestone_text">Visitas</div>
-									</div>
-								</div-->
-
-								<!-- Milestone -->
-								<!--div class="col-md-4 milestone_col">
-									<div class="milestone">
-										<div class="milestone_counter" data-end-value="352">0</div>
-										<div class="milestone_text">Pacientes</div>
-									</div>
-								</div-->
-
-								<!-- Milestone -->
-								<!--div class="col-md-4 milestone_col">
-									<div class="milestone">
-										<div class="milestone_counter" data-end-value="718">0</div>
-										<div class="milestone_text">Médicos</div>
-									</div>
-								</div-->
-
-							</div>
+							<p>Além de médico ao domicílio em todo o país, também disponibilizamos um <strong>serviço de tele-consulta 24h</strong>, todos os dias. Peça agora e tenha uma consulta dentro de minutos.</p><p>A Médico em Casa não tem fidelizações nem custos escondidos e oferece o serviço mais profissional a um preço acessível. Tosse, gripe, enjoo, constipação, febre, vómitos, dores? Evite perder tempo desnecessário em filas e esperas hospitalares e tenha um médico dentro de minutos.</p>
 						</div>
 					</div>
 				</div>
@@ -268,20 +238,13 @@
 				<!-- Intro Form -->
 				<div class="col-lg-6 intro_col">
 					<div class="intro_form_container">
-						<div class="intro_form_title">Marque uma visita</div>
-						<script type="text/javascript">
-							function hideform()
-							{
-								document.getElementById('intro_form').style.display = 'none';
-								document.getElementById('intro_form_thankyou').style.display = 'block';
-							}
-						</script>
+						<div class="intro_form_title">Pedir Tele-consulta</div>
 						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="visit scheduler"></iframe>
-						<form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSe6fWLmSZE_eNy8JND5lh6CA_xGIsTY0GDwDx-0kNwk9VrI_Q/formResponse" class="intro_form" id="intro_form" target="hidden_iframe" onsubmit="hideform()">
+						<form action="https://novamed.pt/tele-consulta-medica/" class="intro_form" id="intro_form">
 							<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-								<input name="entry.316678319" type="text" class="intro_input" placeholder="O seu nome" required="required">
-								<input name="entry.1531475252" type="email" class="intro_input" placeholder="E-mail" required="required">
-								<input name="entry.646546166" type="tel" class="intro_input" placeholder="Número de telefone" required="required" pattern="[0-9 \-+]+">
+								<input name="name" type="text" class="intro_input" placeholder="Nome" required="required">
+								<!--input name="entry.1531475252" type="email" class="intro_input" placeholder="E-mail" required="required"-->
+								<input name="phone" type="tel" class="intro_input" placeholder="Telefone" required="required" pattern="[0-9 \-+]+">
 								<!--select class="intro_select intro_input" required>
 									<option disabled="" selected="" value="">Speciality</option>
 									<option>Speciality 1</option>
@@ -298,16 +261,10 @@
 										<option>Doctor 4</option>
 										<option>Doctor 5</option>
 									</select-->
-								<input name="entry.1094250517" type="text" id="datetimepicker" class="intro_input form_datetime" placeholder="Data que pretende" required="required">
+								<!--input name="entry.1094250517" type="text" id="datetimepicker" class="intro_input form_datetime" placeholder="Data que pretende" required="required"-->
 							</div>
-							<button class="button button_1 intro_button trans_200">marcar visita</button>
+							<button class="button button_1 intro_button trans_200">Fazer pedido</button>
 						</form>
-						<div id="intro_form_thankyou" style="display: none">
-						<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
-							<h3>A sua visita foi agendada.</h3>
-							<p>Entraremos em contacto consigo muito em breve.</p>
-						</div>
-						</div>
 					</div>
 				</div>
 
@@ -570,7 +527,7 @@
 							<div class="footer_title">Localização</div>
 							<ul class="locations_list">
 								<li>
-									<div class="location_title">Servimos em Todo o País</div>
+									<div class="location_title"><b>Servimos em Todo o País</b>, incluíndo:</div>
 									<br/>
 									<div class="location_title">Grande Lisboa</div>
 									<div class="location_text">Lisboa, Oeiras, Cascais, Sintra, Amadora, Loures, Odivelas, Loures, Vila Franca de Xira</div>
